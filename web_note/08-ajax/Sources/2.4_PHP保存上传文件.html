@@ -1,0 +1,741 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>2.4 PHP保存上传文件 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="2.5_PHP设置上传文件大小限制.html" />
+    
+    
+    <link rel="prev" href="2.3_PHP超全局变量.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" >
+            
+                <span>
+            
+                    
+                    一、服务器
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="1.1_计算机网络基础知识.html">
+            
+                <a href="1.1_计算机网络基础知识.html">
+            
+                    
+                    1.1 计算机网络基础知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="1.2_CSVBS架构.html">
+            
+                <a href="1.2_CSVBS架构.html">
+            
+                    
+                    1.2 CS V BS架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="1.3_Web开发概述.html">
+            
+                <a href="1.3_Web开发概述.html">
+            
+                    
+                    1.3 Web开发概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="1.4_HTTP服务搭建.html">
+            
+                <a href="1.4_HTTP服务搭建.html">
+            
+                    
+                    1.4 HTTP服务搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="1.5_网络传输协议-HTTP协议.html">
+            
+                <a href="1.5_网络传输协议-HTTP协议.html">
+            
+                    
+                    1.5 网络传输协议-HTTP协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" >
+            
+                <span>
+            
+                    
+                    二、PHP
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="2.1_PHP概述及常见语法.html">
+            
+                <a href="2.1_PHP概述及常见语法.html">
+            
+                    
+                    2.1 PHP概述及常见语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="2.2_PHP中的header.html">
+            
+                <a href="2.2_PHP中的header.html">
+            
+                    
+                    2.2 PHP中的header
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="2.3_PHP超全局变量.html">
+            
+                <a href="2.3_PHP超全局变量.html">
+            
+                    
+                    2.3 PHP超全局变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.1.4" data-path="2.4_PHP保存上传文件.html">
+            
+                <a href="2.4_PHP保存上传文件.html">
+            
+                    
+                    2.4 PHP保存上传文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5" data-path="2.5_PHP设置上传文件大小限制.html">
+            
+                <a href="2.5_PHP设置上传文件大小限制.html">
+            
+                    
+                    2.5 PHP设置上传文件大小限制
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" >
+            
+                <span>
+            
+                    
+                    三、ajax
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="3.1_前端通讯两大技术.html">
+            
+                <a href="3.1_前端通讯两大技术.html">
+            
+                    
+                    3.1 前端通讯两大技术(form|ajax)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="3.2_ajax概念及基本使用.html">
+            
+                <a href="3.2_ajax概念及基本使用.html">
+            
+                    
+                    3.2 ajax概念及基本使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="3.3_ajax传输XML.html">
+            
+                <a href="3.3_ajax传输XML.html">
+            
+                    
+                    3.3 ajax传输XML
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4" data-path="3.4_ajax传输JSON.html">
+            
+                <a href="3.4_ajax传输JSON.html">
+            
+                    
+                    3.4 ajax传输JSON
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" >
+            
+                <span>
+            
+                    
+                    四、封装
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" data-path="4.1_ajax工具函数封装.html">
+            
+                <a href="4.1_ajax工具函数封装.html">
+            
+                    
+                    4.1 ajax工具函数封装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.2" data-path="4.2_模板引擎.html">
+            
+                <a href="4.2_模板引擎.html">
+            
+                    
+                    4.2 模板引擎
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" >
+            
+                <span>
+            
+                    
+                    五、其他
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.1" data-path="5.1_jQuery中的ajax.html">
+            
+                <a href="5.1_jQuery中的ajax.html">
+            
+                    
+                    5.1 jQuery中的ajax
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.2" data-path="5.2_瀑布流.html">
+            
+                <a href="5.2_瀑布流.html">
+            
+                    
+                    5.2 瀑布流($.ajax+template)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.3" data-path="5.3_同源以及跨域.html">
+            
+                <a href="5.3_同源以及跨域.html">
+            
+                    
+                    5.3 同源以及跨域
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" >
+            
+                <span>
+            
+                    
+                    六、附录
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1.1" data-path="6.1_Sublime常用插件.html">
+            
+                <a href="6.1_Sublime常用插件.html">
+            
+                    
+                    6.1 Sublime常用插件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.2" data-path="6.2_Sublime自定义代码段.html">
+            
+                <a href="6.2_Sublime自定义代码段.html">
+            
+                    
+                    6.2 Sublime自定义代码段
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.3" data-path="6.3_Markdown部分语法.html">
+            
+                <a href="6.3_Markdown部分语法.html">
+            
+                    
+                    6.3 Markdown部分语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >2.4 PHP保存上传文件</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#php&#x4FDD;&#x5B58;&#x4E0A;&#x4F20;&#x6587;&#x4EF6;"><b></b>php&#x4FDD;&#x5B58;&#x4E0A;&#x4F20;&#x6587;&#x4EF6;</a></li><ul><li><span class="title-icon "></span><a href="#file"><b></b>$_FILE</a></li><li><span class="title-icon "></span><a href="#moveuploadedfile&#x79FB;&#x52A8;&#x6587;&#x4EF6;"><b></b>move_uploaded_file(&#x79FB;&#x52A8;&#x6587;&#x4EF6;)</a></li></ul></ul></div><a href="#php&#x4FDD;&#x5B58;&#x4E0A;&#x4F20;&#x6587;&#x4EF6;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="php&#x4FDD;&#x5B58;&#x4E0A;&#x4F20;&#x6587;&#x4EF6;"><a name="php&#x4FDD;&#x5B58;&#x4E0A;&#x4F20;&#x6587;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#php&#x4FDD;&#x5B58;&#x4E0A;&#x4F20;&#x6587;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>php&#x4FDD;&#x5B58;&#x4E0A;&#x4F20;&#x6587;&#x4EF6;</h1>
+<blockquote>
+<p>php&#x4E2D;&#x4E0A;&#x4F20;&#x7684;&#x6587;&#x4EF6;,&#x4F1A;&#x5148;&#x4EE5;&#x4E34;&#x65F6;&#x6587;&#x4EF6;&#x7684;&#x65B9;&#x5F0F;&#x4FDD;&#x5B58;&#x8D77;&#x6765;,&#x6211;&#x4EEC;&#x5C06;&#x5176;&#x79FB;&#x52A8;&#x5230;&#x5176;&#x4ED6;&#x7684;&#x4F4D;&#x7F6E;&#x5373;&#x53EF;</p>
+</blockquote>
+<h2 id="file"><a name="file" class="anchor-navigation-ex-anchor" href="#file"><i class="fa fa-link" aria-hidden="true"></i></a>$_FILE</h2>
+<p>&#x5728;php&#x4E2D; &#x80FD;&#x591F;&#x901A;&#x8FC7;$_FILE &#x83B7;&#x53D6;&#x4E0A;&#x4F20;&#x7684;&#x6587;&#x4EF6;</p>
+<ul>
+<li>&#x6D4F;&#x89C8;&#x5668;&#x7AEF;&#x90E8;&#x5206;&#x4EE3;&#x7801;()<ul>
+<li>&#x5047;&#x5B9A;&#x6D4F;&#x89C8;&#x5668;&#x5728;form&#x8868;&#x5355;&#x4E2D;&#x5982;&#x4E0B;&#x6807;&#x7B7E;</li>
+<li><code>&#x6CE8;1</code>form&#x63D0;&#x4EA4;&#x6570;&#x636E;&#x9700;&#x4F7F;&#x7528;<code>post</code>&#x63D0;&#x4EA4;</li>
+<li><code>&#x6CE8;2</code>form&#x63D0;&#x4EA4;&#x6570;&#x636E;&#x65F6;,&#x9700;&#x5728;form&#x8868;&#x5355;&#x4E2D;&#x6DFB;&#x52A0;<code>enctype=multipart/form-data</code>&#x5C5E;&#x6027;</li>
+</ul>
+</li>
+</ul>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&apos;xx.php&apos;</span> <span class="hljs-attr">method</span>=<span class="hljs-string">&apos;post&apos;</span> <span class="hljs-attr">enctype</span>=<span class="hljs-string">&apos;multipart/form-data&apos;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&apos;file&apos;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&apos;icon&apos;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&apos;submit&apos;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+</code></pre>
+<ul>
+<li><p>&#x670D;&#x52A1;&#x7AEF;&#x4EE3;&#x7801;</p>
+<ul>
+<li><p><code>$_FILES</code>&#x7528;&#x6CD5;&#x8DDF;<code>$_GET,$_POST</code>&#x7C7B;&#x4F3C;,&#x90FD;&#x662F;&#x5173;&#x7CFB;&#x578B;&#x6570;&#x7EC4;</p>
+</li>
+<li><p><code>#_FILE[&apos;key&apos;]</code>:&#x53EF;&#x4EE5;&#x83B7;&#x53D6;&#x5BF9;&#x5E94;&#x4E0A;&#x4F20;&#x7684;&#x6587;&#x4EF6;,&#x8FD9;&#x91CC;&#x7684;key&#x8DDF;&#x63D0;&#x4EA4;&#x65F6;&#x7684;name&#x76F8;&#x5BF9;&#x5E94;</p>
+</li>
+<li><p><code>#_FILE[&apos;key&apos;][&apos;name&apos;]</code> &#x53EF;&#x4EE5;&#x83B7;&#x53D6;&#x4E0A;&#x4F20;&#x7684;&#x6587;&#x4EF6;&#x540D;</p>
+</li>
+<li><p><code>#_FILE[&apos;key&apos;][&apos;tmp_name&apos;]</code></p>
+<p>&#x53EF;&#x4EE5;&#x83B7;&#x53D6;&#x4E0A;&#x4F20;&#x7684;&#x6587;&#x4EF6;&#x4FDD;&#x5B58;&#x7684;&#x4E34;&#x65F6;&#x76EE;&#x5F55;</p>
+<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+<span class="hljs-comment">// &#x53EF;&#x4EE5;&#x6253;&#x5370; $_FILES&#x7684;&#x6240;&#x6709;&#x4FE1;&#x606F;</span>
+print_r($_FILES);
+<span class="hljs-meta">?&gt;</span>
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="moveuploadedfile&#x79FB;&#x52A8;&#x6587;&#x4EF6;"><a name="moveuploadedfile&#x79FB;&#x52A8;&#x6587;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#moveuploadedfile&#x79FB;&#x52A8;&#x6587;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>move_uploaded_file(&#x79FB;&#x52A8;&#x6587;&#x4EF6;)</h2>
+<ul>
+<li><p>&#x4E0A;&#x4F20;&#x7684;&#x4E34;&#x65F6;&#x6587;&#x4EF6;,&#x4E00;&#x4F1A;&#x5C31;&#x4F1A;&#x88AB;&#x81EA;&#x52A8;&#x5220;&#x9664;,&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5C06;&#x5176;&#x79FB;&#x52A8;&#x5230;&#x4FDD;&#x5B58;&#x7684;&#x4F4D;&#x7F6E;</p>
+</li>
+<li><p>move_uploaded_file&#x53C2;&#x6570;:</p>
+<ul>
+<li><p>&#x53C2;&#x6570;1:&#x79FB;&#x52A8;&#x7684;&#x6587;&#x4EF6;</p>
+</li>
+<li><p>&#x53C2;&#x6570;2:&#x76EE;&#x6807;&#x8DEF;&#x5F84;</p>
+<pre><code class="lang-php">move_uploaded_file($_FILES[<span class="hljs-string">&apos;photo&apos;</span>][<span class="hljs-string">&apos;tmp_name&apos;</span>], <span class="hljs-string">&apos;./images/test.jpg&apos;</span>);
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="2.3_PHP超全局变量.html" class="navigation navigation-prev " aria-label="Previous page: 2.3 PHP超全局变量">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="2.5_PHP设置上传文件大小限制.html" class="navigation navigation-next " aria-label="Next page: 2.5 PHP设置上传文件大小限制">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"2.4 PHP保存上传文件","level":"3.1.4","depth":2,"next":{"title":"2.5 PHP设置上传文件大小限制","level":"3.1.5","depth":2,"path":"Sources/2.5_PHP设置上传文件大小限制.md","ref":"./Sources/2.5_PHP设置上传文件大小限制.md","articles":[]},"previous":{"title":"2.3 PHP超全局变量","level":"3.1.3","depth":2,"path":"Sources/2.3_PHP超全局变量.md","ref":"./Sources/2.3_PHP超全局变量.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["-lunr","-search","search-pro","expandable-chapters","splitter","anchor-navigation-ex","livereload"],"pluginsConfig":{"livereload":{},"splitter":{},"search-pro":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Sources/2.4_PHP保存上传文件.md","mtime":"2021-05-20T07:27:40.086Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-20T08:29:44.980Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
