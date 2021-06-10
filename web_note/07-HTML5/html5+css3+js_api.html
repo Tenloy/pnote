@@ -8,7 +8,10 @@
     <link rel="stylesheet" type="text/css" href="css/base.css">
     <script>
 
-        <!--左侧目录的折叠-->
+        navigator.geolocation.getCurrentPosition((pos)=>{
+            alert(pos.coords.longitude);
+        })
+        // 左侧目录的折叠-->
         function foldTag(foldTagId,foldSignId) {
 
             var traget = document.getElementById(foldTagId);
