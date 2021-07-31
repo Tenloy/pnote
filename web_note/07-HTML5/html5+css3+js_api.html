@@ -1340,7 +1340,20 @@
                 <h4>弹性(伸缩)布局</h4>
                 <div>
                     <p>CSS3在布局方面做了非常大的改进，使得我们对<span class="redColor">块级元素</span>的布局排列变得十分灵活，适应性非常强，其强大的伸缩性，在响应式开中可以发挥极大的作用。</p>
-                    <p>首先，需要明确主轴、侧轴的概念</p>
+                    <p>Flex 是 Flexible Box 的缩写，意为"弹性布局"，用来为盒状模型提供最大的灵活性。任何一个容器都可以指定为 Flex 布局。</p>
+                    <p>采用 Flex 布局的元素，称为 Flex 容器（flex container），简称"容器"。它的所有子元素自动成为容器成员，称为 Flex 项目（flex item），简称"项目"。</p>
+                    <div class="bgcontent">
+                        <p>.box{</p>
+                            <p class="fourEmContent">display: flex;</p>
+                        <p>}</p>
+                        <p>//行内元素也可以使用 Flex 布局 </p>
+                        <p>.box{</p>
+                            <p class="fourEmContent">display: inline-flex;</p>
+                        <p>}</p>
+                    </div>
+                    <p>现在使用flex布局的越来越多，使用浮动来开发的已经越来越少，适配问题变得越来越不明显。参考链接：<a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html">Flex 布局教程：语法篇 —— 阮一峰</a></p>
+                    <br>
+                    <p>学习Flex，首先要需要明确主轴、侧轴的概念</p>
                     <p class="fourEmContent">主轴：Flex容器的主轴主要用来配置Flex项目，默认是从左到右</p>
                     <p class="fourEmContent">侧轴：与主轴垂直的轴称作侧轴，默认从上到下</p>
 
@@ -1377,7 +1390,7 @@
                         <strong>设置给子盒子的</strong>
                         <p>flex控制子项目在<span class="redColor">主轴</span>的缩放比例</p>
                         <p class="fourEmContent">不指定flex 属性，则不参与分配，按照本来的值放在那。</p>
-                        <p class="fourEmContent">设置了flex属性的子盒子，在主轴的长度加起来，按照各自flex的值的比例来分配 剩余空间。</p>
+                        <p class="fourEmContent">设置了flex属性的子盒子，在主轴的长度加起来，按照各自flex的值的比例来分配<span class="redColor">剩余空间</span>。</p>
 
                         <strong>不怎么用的几个属性</strong>
                         <p>flex-wrap</p>
@@ -1391,6 +1404,13 @@
 
                     </div>
                     <p>此知识点重在理解，要明确找出主轴、方向，各属性对应的属性值可参考示例源码</p>
+                    
+                    <strong>注意：</strong>
+                    
+                    <p>1. 设为 Flex 布局以后，子元素的 float、clear 和 vertical-align 属性将失效。</p>
+                    <p>2. 如果父元素设置固定高度，则子元素中没有设置高度的元素将继承父元素的高度；</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;但是如果父元素的align-items设置以后那么子元素的高度则会由自身内容决定。</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;如果父元素没有设置高度，其高度由最高的子元素决定。</p>
 
 
                 </div>
