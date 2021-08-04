@@ -1,0 +1,1829 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>5.10 装饰器(Decorator)、Mixin、Traits · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="5.9_前端模块化方案总结.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" >
+            
+                <span>
+            
+                    
+                    一、JavaScript基础知识复习
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="1.1_基础复习题.html">
+            
+                <a href="1.1_基础复习题.html">
+            
+                    
+                    1.1 基础复习题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" >
+            
+                <span>
+            
+                    
+                    1.2 内置对象与方法
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.2.1" data-path="1.2.1_Array.html">
+            
+                <a href="1.2.1_Array.html">
+            
+                    
+                    1.2.1 Array
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2.2" data-path="1.2.2_Date.html">
+            
+                <a href="1.2.2_Date.html">
+            
+                    
+                    1.2.2 Date
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2.3" data-path="1.2.3_Number.html">
+            
+                <a href="1.2.3_Number.html">
+            
+                    
+                    1.2.3 Number
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2.4" data-path="1.2.4_Boolean.html">
+            
+                <a href="1.2.4_Boolean.html">
+            
+                    
+                    1.2.4 Boolean
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2.5" data-path="1.2.5_String.html">
+            
+                <a href="1.2.5_String.html">
+            
+                    
+                    1.2.5 String
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2.6" data-path="1.2.6_Math.html">
+            
+                <a href="1.2.6_Math.html">
+            
+                    
+                    1.2.6 Math
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="1.3_值类型和引用类型.html">
+            
+                <a href="1.3_值类型和引用类型.html">
+            
+                    
+                    1.3 值类型和引用类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="1.4_值类型和引用类型的特征.html">
+            
+                <a href="1.4_值类型和引用类型的特征.html">
+            
+                    
+                    1.4 值类型和引用类型的特征
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="1.5_对象的动态特性.html">
+            
+                <a href="1.5_对象的动态特性.html">
+            
+                    
+                    1.5 对象的动态特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6" data-path="1.6_DOM操作复习.html">
+            
+                <a href="1.6_DOM操作复习.html">
+            
+                    
+                    1.6 DOM操作复习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.7" data-path="1.7_异常处理.html">
+            
+                <a href="1.7_异常处理.html">
+            
+                    
+                    1.7 异常处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.8" data-path="1.8_调试工具的使用.html">
+            
+                <a href="1.8_调试工具的使用.html">
+            
+                    
+                    1.8 调试工具的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" >
+            
+                <span>
+            
+                    
+                    二、面向对象
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="2.1_面向对象概念介绍.html">
+            
+                <a href="2.1_面向对象概念介绍.html">
+            
+                    
+                    2.1 面向对象概念介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="2.2_面向对象编程举例.html">
+            
+                <a href="2.2_面向对象编程举例.html">
+            
+                    
+                    2.2 面向对象编程举例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="2.3_构造函数.html">
+            
+                <a href="2.3_构造函数.html">
+            
+                    
+                    2.3 构造函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="2.4_面向对象的三大特性.html">
+            
+                <a href="2.4_面向对象的三大特性.html">
+            
+                    
+                    2.4 面向对象的三大特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5" >
+            
+                <span>
+            
+                    
+                    2.5 原型
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.5.1" data-path="2.5.1_传统构造函数存在的问题.html">
+            
+                <a href="2.5.1_传统构造函数存在的问题.html">
+            
+                    
+                    2.5.1 传统构造函数存在的问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5.2" data-path="2.5.2_使用原型解决构造函数问题.html">
+            
+                <a href="2.5.2_使用原型解决构造函数问题.html">
+            
+                    
+                    2.5.2 使用原型解决构造函数问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5.3" data-path="2.5.3_原型相关概念.html">
+            
+                <a href="2.5.3_原型相关概念.html">
+            
+                    
+                    2.5.3 原型相关概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5.4" data-path="2.5.4_原型的使用.html">
+            
+                <a href="2.5.4_原型的使用.html">
+            
+                    
+                    2.5.4 原型的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5.5" data-path="2.5.5_proto.html">
+            
+                <a href="2.5.5_proto.html">
+            
+                    
+                    2.5.5 __proto__
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.6" data-path="2.6_继承的概念及实现方式.html">
+            
+                <a href="2.6_继承的概念及实现方式.html">
+            
+                    
+                    2.6 继承的概念及实现方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.7" data-path="2.7_原型三角绘制.html">
+            
+                <a href="2.7_原型三角绘制.html">
+            
+                    
+                    2.7 原型三角绘制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.8" data-path="2.8_属性搜索原则.html">
+            
+                <a href="2.8_属性搜索原则.html">
+            
+                    
+                    2.8 属性搜索原则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.9" >
+            
+                <span>
+            
+                    
+                    2.9 原型链
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.9.1" data-path="2.9.1_原型链结构.html">
+            
+                <a href="2.9.1_原型链结构.html">
+            
+                    
+                    2.9.1 原型链结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.9.2" data-path="2.9.2_原型式继承.html">
+            
+                <a href="2.9.2_原型式继承.html">
+            
+                    
+                    2.9.2 原型式继承
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.10" >
+            
+                <span>
+            
+                    
+                    2.10 对象相关的其他知识
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.10.1" data-path="2.10.1_Object.prototype成员介绍.html">
+            
+                <a href="2.10.1_Object.prototype成员介绍.html">
+            
+                    
+                    2.10.1 Object.prototype成员介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.10.2" data-path="2.10.2_Function.html">
+            
+                <a href="2.10.2_Function.html">
+            
+                    
+                    2.10.2 Function
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.10.2.1" data-path="2.10.2.1_Function的使用.html">
+            
+                <a href="2.10.2.1_Function的使用.html">
+            
+                    
+                    1) Function的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.10.2.2" data-path="2.10.2.2_参数代码太长的问题.html">
+            
+                <a href="2.10.2.2_参数代码太长的问题.html">
+            
+                    
+                    2) 参数代码太长的问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.10.3" data-path="2.10.3_静态成员和实例成员.html">
+            
+                <a href="2.10.3_静态成员和实例成员.html">
+            
+                    
+                    2.10.3 静态成员和实例成员
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.10.4" data-path="2.10.4_arguments对象.html">
+            
+                <a href="2.10.4_arguments对象.html">
+            
+                    
+                    2.10.4 arguments对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.10.5" data-path="2.10.5_深拷贝和浅拷贝.html">
+            
+                <a href="2.10.5_深拷贝和浅拷贝.html">
+            
+                    
+                    2.10.5 深拷贝和浅拷贝
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" >
+            
+                <span>
+            
+                    
+                    三、JavaScript高级知识
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="3.1_递归.html">
+            
+                <a href="3.1_递归.html">
+            
+                    
+                    3.1 递归
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" >
+            
+                <span>
+            
+                    
+                    3.2 作用域
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.2.1" data-path="3.2.1_词法作用域.html">
+            
+                <a href="3.2.1_词法作用域.html">
+            
+                    
+                    3.2.1 词法作用域
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2.2" data-path="3.2.2_变量名提升.html">
+            
+                <a href="3.2.2_变量名提升.html">
+            
+                    
+                    3.2.2 变量名提升
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2.3" data-path="3.2.3_作用域链.html">
+            
+                <a href="3.2.3_作用域链.html">
+            
+                    
+                    3.2.3 作用域链
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="3.3_闭包.html">
+            
+                <a href="3.3_闭包.html">
+            
+                    
+                    3.3 闭包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4" data-path="3.4_函数的四种调用模式.html">
+            
+                <a href="3.4_函数的四种调用模式.html">
+            
+                    
+                    3.4 函数的四种调用模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.5" data-path="3.5_函数的重复创建问题.html">
+            
+                <a href="3.5_函数的重复创建问题.html">
+            
+                    
+                    3.5 函数的重复创建问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.6" data-path="3.6_ES5严格模式.html">
+            
+                <a href="3.6_ES5严格模式.html">
+            
+                    
+                    3.6 ES5严格模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" >
+            
+                <span>
+            
+                    
+                    四、面向对象案例
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" >
+            
+                <span>
+            
+                    
+                    4.1 歌曲列表管理
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.2" >
+            
+                <span>
+            
+                    
+                    4.2 Tab栏切换
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" >
+            
+                <span>
+            
+                    
+                    五、ES6语法扩展
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.1" data-path="5.1_ECMAScript 6 简介.html">
+            
+                <a href="5.1_ECMAScript 6 简介.html">
+            
+                    
+                    5.1 ECMAScript 6 简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.2" data-path="5.2_let和const命令.html">
+            
+                <a href="5.2_let和const命令.html">
+            
+                    
+                    5.2 let和const命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.3" data-path="5.3_块级作用域.html">
+            
+                <a href="5.3_块级作用域.html">
+            
+                    
+                    5.3 块级作用域
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.4" data-path="5.4_解构赋值.html">
+            
+                <a href="5.4_解构赋值.html">
+            
+                    
+                    5.4 解构赋值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.5" data-path="5.5_字符串的一些扩展.html">
+            
+                <a href="5.5_字符串的一些扩展.html">
+            
+                    
+                    5.5 字符串的扩展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.6" data-path="5.6_函数、数组、OOP的扩展.html">
+            
+                <a href="5.6_函数、数组、OOP的扩展.html">
+            
+                    
+                    5.6 函数、数组、OOP的扩展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.7" data-path="5.7_异步编程.html">
+            
+                <a href="5.7_异步编程.html">
+            
+                    
+                    5.7 异步编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.8" data-path="5.8_发布订阅模式和观察者模式.html">
+            
+                <a href="5.8_发布订阅模式和观察者模式.html">
+            
+                    
+                    5.8 发布订阅模式和观察者模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.1.9" data-path="5.9_前端模块化方案总结.html">
+            
+                <a href="5.9_前端模块化方案总结.html">
+            
+                    
+                    5.9 前端模块化方案总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="6.1.10" data-path="5.10_装饰器Decorator、Mixin、Traits.html">
+            
+                <a href="5.10_装饰器Decorator、Mixin、Traits.html">
+            
+                    
+                    5.10 装饰器(Decorator)、Mixin、Traits
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >5.10 装饰器(Decorator)、Mixin、Traits</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><li><span class="title-icon "></span><a href="#&#x4E00;&#x3001;&#x7C7B;&#x7684;&#x88C5;&#x9970;"><b></b>&#x4E00;&#x3001;&#x7C7B;&#x7684;&#x88C5;&#x9970;</a></li><ul><li><span class="title-icon "></span><a href="#11-&#x6982;&#x8FF0;"><b></b>1.1 &#x6982;&#x8FF0;</a></li><li><span class="title-icon "></span><a href="#12-&#x4F20;&#x5165;&#x53C2;&#x6570;"><b></b>1.2 &#x4F20;&#x5165;&#x53C2;&#x6570;</a></li><li><span class="title-icon "></span><a href="#13-&#x4E3E;&#x4F8B;-&#x4E0E;mixin&#x7ED3;&#x5408;&#x4F7F;&#x7528;"><b></b>1.3 &#x4E3E;&#x4F8B;: &#x4E0E;mixin&#x7ED3;&#x5408;&#x4F7F;&#x7528;</a></li><li><span class="title-icon "></span><a href="#14-&#x4E3E;&#x4F8B;-&#x88C5;&#x9970;react&#x7EC4;&#x4EF6;"><b></b>1.4 &#x4E3E;&#x4F8B;: &#x88C5;&#x9970;React&#x7EC4;&#x4EF6;</a></li></ul><li><span class="title-icon "></span><a href="#&#x4E8C;&#x3001;&#x65B9;&#x6CD5;&#x7684;&#x88C5;&#x9970;"><b></b>&#x4E8C;&#x3001;&#x65B9;&#x6CD5;&#x7684;&#x88C5;&#x9970;</a></li><ul><li><span class="title-icon "></span><a href="#21-&#x6982;&#x8FF0;"><b></b>2.1 &#x6982;&#x8FF0;</a></li><li><span class="title-icon "></span><a href="#22-&#x4E3E;&#x4F8B;"><b></b>2.2 &#x4E3E;&#x4F8B;</a></li><li><span class="title-icon "></span><a href="#23-&#x88C5;&#x9970;&#x5668;&#x7684;&#x6CE8;&#x91CA;&#x4F5C;&#x7528;"><b></b>2.3 &#x88C5;&#x9970;&#x5668;&#x7684;&#x6CE8;&#x91CA;&#x4F5C;&#x7528;</a></li><li><span class="title-icon "></span><a href="#24-&#x591A;&#x4E2A;&#x88C5;&#x9970;&#x5668;&#x7684;&#x6267;&#x884C;&#x987A;&#x5E8F;"><b></b>2.4 &#x591A;&#x4E2A;&#x88C5;&#x9970;&#x5668;&#x7684;&#x6267;&#x884C;&#x987A;&#x5E8F;</a></li></ul><li><span class="title-icon "></span><a href="#&#x4E09;&#x3001;&#x4E3A;&#x4EC0;&#x4E48;&#x88C5;&#x9970;&#x5668;&#x4E0D;&#x80FD;&#x7528;&#x4E8E;&#x51FD;&#x6570;&#xFF1F;"><b></b>&#x4E09;&#x3001;&#x4E3A;&#x4EC0;&#x4E48;&#x88C5;&#x9970;&#x5668;&#x4E0D;&#x80FD;&#x7528;&#x4E8E;&#x51FD;&#x6570;&#xFF1F;</a></li><li><span class="title-icon "></span><a href="#&#x56DB;&#x3001;core-decoratorsjs"><b></b>&#x56DB;&#x3001;core-decorators.js</a></li><ul><li><span class="title-icon "></span><a href="#41-autobind"><b></b>4.1 @autobind</a></li><li><span class="title-icon "></span><a href="#42-readonly"><b></b>4.2 @readonly</a></li><li><span class="title-icon "></span><a href="#43-override"><b></b>4.3 @override</a></li><li><span class="title-icon "></span><a href="#44-deprecate-&#x522B;&#x540D;deprecated"><b></b>4.4 @deprecate (&#x522B;&#x540D;@deprecated)</a></li><li><span class="title-icon "></span><a href="#45-suppresswarnings"><b></b>4.5 @suppressWarnings</a></li></ul><li><span class="title-icon "></span><a href="#&#x4E94;&#x3001;&#x4F7F;&#x7528;&#x88C5;&#x9970;&#x5668;&#x5B9E;&#x73B0;&#x81EA;&#x52A8;&#x53D1;&#x5E03;&#x4E8B;&#x4EF6;"><b></b>&#x4E94;&#x3001;&#x4F7F;&#x7528;&#x88C5;&#x9970;&#x5668;&#x5B9E;&#x73B0;&#x81EA;&#x52A8;&#x53D1;&#x5E03;&#x4E8B;&#x4EF6;</a></li><li><span class="title-icon "></span><a href="#&#x516D;&#x3001;mixin"><b></b>&#x516D;&#x3001;Mixin</a></li><li><span class="title-icon "></span><a href="#&#x4E03;&#x3001;trait"><b></b>&#x4E03;&#x3001;Trait</a></li></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><blockquote>
+<p>[&#x8BF4;&#x660E;] &#x88C5;&#x9970;&#x5668;(Decorator) &#x63D0;&#x6848;&#x7ECF;&#x8FC7;&#x4E86;&#x5927;&#x5E45;&#x4FEE;&#x6539;&#xFF0C;&#x76EE;&#x524D;&#x8FD8;&#x6CA1;&#x6709;&#x5B9A;&#x6848;&#xFF0C;&#x4E0D;&#x77E5;&#x9053;&#x8BED;&#x6CD5;&#x4F1A;&#x4E0D;&#x4F1A;&#x518D;&#x53D8;&#x3002;&#x4E0B;&#x9762;&#x7684;&#x5185;&#x5BB9;&#x5B8C;&#x5168;&#x4F9D;&#x636E;&#x4EE5;&#x524D;&#x7684;&#x63D0;&#x6848;&#xFF0C;&#x5DF2;&#x7ECF;&#x6709;&#x70B9;&#x8FC7;&#x65F6;&#x4E86;&#x3002;&#x7B49;&#x5F85;&#x5B9A;&#x6848;&#x4EE5;&#x540E;&#xFF0C;&#x9700;&#x8981;&#x5B8C;&#x5168;&#x91CD;&#x5199;&#x3002;</p>
+</blockquote>
+<p>&#x88C5;&#x9970;&#x5668;&#xFF08;Decorator&#xFF09;&#x662F;&#x4E00;&#x79CD;&#x4E0E;&#x7C7B;&#xFF08;class&#xFF09;&#x76F8;&#x5173;&#x7684;&#x8BED;&#x6CD5;&#xFF0C;&#x7528;&#x6765;&#x6CE8;&#x91CA;&#x6216;&#x4FEE;&#x6539;&#x7C7B;&#x548C;&#x7C7B;&#x65B9;&#x6CD5;&#x3002;&#x8BB8;&#x591A;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7684;&#x8BED;&#x8A00;&#x90FD;&#x6709;&#x8FD9;&#x9879;&#x529F;&#x80FD;&#xFF0C;&#x76EE;&#x524D;&#x6709;&#x4E00;&#x4E2A;<a href="https://github.com/tc39/proposal-decorators" target="_blank">&#x63D0;&#x6848;</a>&#x5C06;&#x5176;&#x5F15;&#x5165;&#x4E86; ECMAScript&#x3002;</p>
+<p>&#x88C5;&#x9970;&#x5668;&#x662F;&#x4E00;&#x79CD;&#x51FD;&#x6570;&#xFF0C;&#x5199;&#x6210;<code>@ + &#x51FD;&#x6570;&#x540D;</code>&#x3002;&#x5B83;&#x53EF;&#x4EE5;&#x653E;&#x5728;&#x7C7B;&#x548C;&#x7C7B;&#x65B9;&#x6CD5;&#x7684;&#x5B9A;&#x4E49;&#x524D;&#x9762;&#x3002;</p>
+<pre><code class="lang-javascript">@frozen <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span> </span>{
+  @configurable(<span class="hljs-literal">false</span>)
+  @enumerable(<span class="hljs-literal">true</span>)
+  method() {}
+
+  @throttle(<span class="hljs-number">500</span>)
+  expensiveMethod() {}
+}
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x4E00;&#x5171;&#x4F7F;&#x7528;&#x4E86;&#x56DB;&#x4E2A;&#x88C5;&#x9970;&#x5668;&#xFF0C;&#x4E00;&#x4E2A;&#x7528;&#x5728;&#x7C7B;&#x672C;&#x8EAB;&#xFF0C;&#x53E6;&#x5916;&#x4E09;&#x4E2A;&#x7528;&#x5728;&#x7C7B;&#x65B9;&#x6CD5;&#x3002;&#x5B83;&#x4EEC;&#x4E0D;&#x4EC5;&#x589E;&#x52A0;&#x4E86;&#x4EE3;&#x7801;&#x7684;&#x53EF;&#x8BFB;&#x6027;&#xFF0C;&#x6E05;&#x6670;&#x5730;&#x8868;&#x8FBE;&#x4E86;&#x610F;&#x56FE;&#xFF0C;&#x800C;&#x4E14;&#x63D0;&#x4F9B;&#x4E00;&#x79CD;&#x65B9;&#x4FBF;&#x7684;&#x624B;&#x6BB5;&#xFF0C;&#x589E;&#x52A0;&#x6216;&#x4FEE;&#x6539;&#x7C7B;&#x7684;&#x529F;&#x80FD;&#x3002;</p>
+<h2 id="&#x4E00;&#x3001;&#x7C7B;&#x7684;&#x88C5;&#x9970;"><a name="&#x4E00;&#x3001;&#x7C7B;&#x7684;&#x88C5;&#x9970;" class="anchor-navigation-ex-anchor" href="#&#x4E00;&#x3001;&#x7C7B;&#x7684;&#x88C5;&#x9970;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E00;&#x3001;&#x7C7B;&#x7684;&#x88C5;&#x9970;</h2>
+<h3 id="11-&#x6982;&#x8FF0;"><a name="11-&#x6982;&#x8FF0;" class="anchor-navigation-ex-anchor" href="#11-&#x6982;&#x8FF0;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1 &#x6982;&#x8FF0;</h3>
+<p>&#x88C5;&#x9970;&#x5668;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x88C5;&#x9970;&#x6574;&#x4E2A;&#x7C7B;&#x3002;&#x57FA;&#x672C;&#x4E0A;&#xFF0C;&#x88C5;&#x9970;&#x5668;&#x7684;&#x884C;&#x4E3A;&#x5C31;&#x662F;&#x4E0B;&#x9762;&#x8FD9;&#x6837;&#x3002;</p>
+<pre><code class="lang-javascript">@decorator
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">A</span> </span>{}
+
+<span class="hljs-comment">// &#x7B49;&#x540C;&#x4E8E;</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">A</span> </span>{}
+A = decorator(A) || A;
+</code></pre>
+<p>&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x88C5;&#x9970;&#x5668;&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x7C7B;&#x8FDB;&#x884C;&#x5904;&#x7406;&#x7684;&#x51FD;&#x6570;&#x3002;&#x88C5;&#x9970;&#x5668;&#x51FD;&#x6570;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x5C31;&#x662F;&#x6240;&#x8981;&#x88C5;&#x9970;&#x7684;&#x76EE;&#x6807;&#x7C7B;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// @testable &#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x88C5;&#x9970;&#x5668;&#x3002;</span>
+@testable  
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyTestableClass</span> </span>{
+  <span class="hljs-comment">// ...</span>
+}
+
+<span class="hljs-comment">// testable&#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570;target&#xFF0C;&#x5C31;&#x662F;&#x4F1A;&#x88AB;&#x88C5;&#x9970;&#x7684;&#x7C7B;&#x672C;&#x8EAB;&#x3002;&#x8FD9;&#x91CC;&#x662F;MyTestableClass</span>
+<span class="hljs-comment">// @testable &#x4FEE;&#x6539;&#x4E86;MyTestableClass&#x8FD9;&#x4E2A;&#x7C7B;&#x7684;&#x884C;&#x4E3A;&#x3001;&#x5C5E;&#x6027;</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">testable</span>(<span class="hljs-params">target</span>) </span>{
+  target.isTestable = <span class="hljs-literal">true</span>; <span class="hljs-comment">// &#x4E3A;&#x5B83;&#x52A0;&#x4E0A;&#x4E86;&#x9759;&#x6001;&#x5C5E;&#x6027;isTestable</span>
+  target.prototype.isTestable = <span class="hljs-literal">true</span>;   <span class="hljs-comment">// &#x6DFB;&#x52A0;&#x5B9E;&#x4F8B;&#x5C5E;&#x6027;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x76EE;&#x6807;&#x7C7B;&#x7684;`prototype`&#x5BF9;&#x8C61;&#x64CD;&#x4F5C;&#x3002;</span>
+}
+
+MyTestableClass.isTestable <span class="hljs-comment">// true</span>
+
+<span class="hljs-keyword">let</span> obj = <span class="hljs-keyword">new</span> MyTestableClass();
+obj.isTestable <span class="hljs-comment">// true</span>
+</code></pre>
+<p>&#x6CE8;&#x610F;&#xFF0C;&#x88C5;&#x9970;&#x5668;&#x5BF9;&#x7C7B;&#x7684;&#x884C;&#x4E3A;&#x7684;&#x6539;&#x53D8;&#xFF0C;&#x662F;&#x4EE3;&#x7801;&#x7F16;&#x8BD1;&#x65F6;&#x53D1;&#x751F;&#x7684;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x5728;&#x8FD0;&#x884C;&#x65F6;&#x3002;&#x8FD9;&#x610F;&#x5473;&#x7740;&#xFF0C;&#x88C5;&#x9970;&#x5668;&#x80FD;&#x5728;&#x7F16;&#x8BD1;&#x9636;&#x6BB5;&#x8FD0;&#x884C;&#x4EE3;&#x7801;&#x3002;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x88C5;&#x9970;&#x5668;&#x672C;&#x8D28;&#x5C31;&#x662F;&#x7F16;&#x8BD1;&#x65F6;&#x6267;&#x884C;&#x7684;&#x51FD;&#x6570;&#x3002;</p>
+<h3 id="12-&#x4F20;&#x5165;&#x53C2;&#x6570;"><a name="12-&#x4F20;&#x5165;&#x53C2;&#x6570;" class="anchor-navigation-ex-anchor" href="#12-&#x4F20;&#x5165;&#x53C2;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2 &#x4F20;&#x5165;&#x53C2;&#x6570;</h3>
+<p>&#x5982;&#x679C;&#x89C9;&#x5F97;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4E0D;&#x591F;&#x7528;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x88C5;&#x9970;&#x5668;&#x5916;&#x9762;&#x518D;&#x5C01;&#x88C5;&#x4E00;&#x5C42;&#x51FD;&#x6570;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">testable</span>(<span class="hljs-params">isTestable</span>) </span>{
+  <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">target</span>) </span>{
+    target.isTestable = isTestable;
+  }
+}
+
+@testable(<span class="hljs-literal">true</span>)
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyTestableClass</span> </span>{}
+MyTestableClass.isTestable <span class="hljs-comment">// true</span>
+
+@testable(<span class="hljs-literal">false</span>)
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyClass</span> </span>{}
+MyClass.isTestable <span class="hljs-comment">// false</span>
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;&#x88C5;&#x9970;&#x5668;<code>testable</code>&#x53EF;&#x4EE5;&#x63A5;&#x53D7;&#x53C2;&#x6570;&#xFF0C;&#x8FD9;&#x5C31;&#x7B49;&#x4E8E;&#x53EF;&#x4EE5;&#x4FEE;&#x6539;&#x88C5;&#x9970;&#x5668;&#x7684;&#x884C;&#x4E3A;&#x3002;</p>
+<h3 id="13-&#x4E3E;&#x4F8B;-&#x4E0E;mixin&#x7ED3;&#x5408;&#x4F7F;&#x7528;"><a name="13-&#x4E3E;&#x4F8B;-&#x4E0E;mixin&#x7ED3;&#x5408;&#x4F7F;&#x7528;" class="anchor-navigation-ex-anchor" href="#13-&#x4E3E;&#x4F8B;-&#x4E0E;mixin&#x7ED3;&#x5408;&#x4F7F;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3 &#x4E3E;&#x4F8B;: &#x4E0E;mixin&#x7ED3;&#x5408;&#x4F7F;&#x7528;</h3>
+<p>&#x4E0B;&#x9762;&#x662F;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x4F8B;&#x5B50;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// mixins.js</span>
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">mixins</span>(<span class="hljs-params">...list</span>) </span>{
+  <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">target</span>) </span>{
+    <span class="hljs-built_in">Object</span>.assign(target.prototype, ...list)
+  }
+}
+
+<span class="hljs-comment">// main.js</span>
+<span class="hljs-keyword">import</span> { mixins } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./mixins&apos;</span>
+
+<span class="hljs-keyword">const</span> Foo = {
+  foo() { <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;foo&apos;</span>) }
+};
+
+@mixins(Foo)
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyClass</span> </span>{}
+
+<span class="hljs-keyword">let</span> obj = <span class="hljs-keyword">new</span> MyClass();
+obj.foo() <span class="hljs-comment">// &apos;foo&apos;</span>
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x901A;&#x8FC7;&#x88C5;&#x9970;&#x5668;<code>mixins</code>&#xFF0C;&#x628A;<code>Foo</code>&#x5BF9;&#x8C61;&#x7684;&#x65B9;&#x6CD5;&#x6DFB;&#x52A0;&#x5230;&#x4E86;<code>MyClass</code>&#x7684;&#x5B9E;&#x4F8B;&#x4E0A;&#x9762;&#x3002;&#x53EF;&#x4EE5;&#x7528;<code>Object.assign()</code>&#x6A21;&#x62DF;&#x8FD9;&#x4E2A;&#x529F;&#x80FD;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> Foo = {
+  foo() { <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;foo&apos;</span>) }
+};
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyClass</span> </span>{}
+
+<span class="hljs-built_in">Object</span>.assign(MyClass.prototype, Foo);
+
+<span class="hljs-keyword">let</span> obj = <span class="hljs-keyword">new</span> MyClass();
+obj.foo() <span class="hljs-comment">// &apos;foo&apos;</span>
+</code></pre>
+<h3 id="14-&#x4E3E;&#x4F8B;-&#x88C5;&#x9970;react&#x7EC4;&#x4EF6;"><a name="14-&#x4E3E;&#x4F8B;-&#x88C5;&#x9970;react&#x7EC4;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#14-&#x4E3E;&#x4F8B;-&#x88C5;&#x9970;react&#x7EC4;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4 &#x4E3E;&#x4F8B;: &#x88C5;&#x9970;React&#x7EC4;&#x4EF6;</h3>
+<p>&#x5B9E;&#x9645;&#x5F00;&#x53D1;&#x4E2D;&#xFF0C;React &#x4E0E; Redux &#x5E93;&#x7ED3;&#x5408;&#x4F7F;&#x7528;&#x65F6;&#xFF0C;&#x5E38;&#x5E38;&#x9700;&#x8981;&#x5199;&#x6210;&#x4E0B;&#x9762;&#x8FD9;&#x6837;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyReactComponent</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{}
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> connect(mapStateToProps, mapDispatchToProps)(MyReactComponent);
+</code></pre>
+<p>&#x6709;&#x4E86;&#x88C5;&#x9970;&#x5668;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x6539;&#x5199;&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x3002;</p>
+<pre><code class="lang-javascript">@connect(mapStateToProps, mapDispatchToProps)
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyReactComponent</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{}
+</code></pre>
+<p>&#x76F8;&#x5BF9;&#x6765;&#x8BF4;&#xFF0C;&#x540E;&#x4E00;&#x79CD;&#x5199;&#x6CD5;&#x770B;&#x4E0A;&#x53BB;&#x66F4;&#x5BB9;&#x6613;&#x7406;&#x89E3;&#x3002;</p>
+<h2 id="&#x4E8C;&#x3001;&#x65B9;&#x6CD5;&#x7684;&#x88C5;&#x9970;"><a name="&#x4E8C;&#x3001;&#x65B9;&#x6CD5;&#x7684;&#x88C5;&#x9970;" class="anchor-navigation-ex-anchor" href="#&#x4E8C;&#x3001;&#x65B9;&#x6CD5;&#x7684;&#x88C5;&#x9970;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E8C;&#x3001;&#x65B9;&#x6CD5;&#x7684;&#x88C5;&#x9970;</h2>
+<h3 id="21-&#x6982;&#x8FF0;"><a name="21-&#x6982;&#x8FF0;" class="anchor-navigation-ex-anchor" href="#21-&#x6982;&#x8FF0;"><i class="fa fa-link" aria-hidden="true"></i></a>2.1 &#x6982;&#x8FF0;</h3>
+<p>&#x88C5;&#x9970;&#x5668;&#x4E0D;&#x4EC5;&#x53EF;&#x4EE5;&#x88C5;&#x9970;&#x7C7B;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x88C5;&#x9970;&#x7C7B;&#x7684;&#x5C5E;&#x6027;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span> </span>{
+  @readonly  <span class="hljs-comment">// &#x88C5;&#x9970;&#x5668; readonly &#x7528;&#x6765;&#x88C5;&#x9970;&#x201C;&#x7C7B;&#x201D;&#x7684; name &#x65B9;&#x6CD5;&#x3002;</span>
+  name() { <span class="hljs-keyword">return</span> <span class="hljs-string">`<span class="hljs-subst">${this.first}</span> <span class="hljs-subst">${this.last}</span>`</span> }
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">readonly</span>(<span class="hljs-params">target, name, descriptor</span>)</span>{
+  <span class="hljs-comment">// descriptor&#x5BF9;&#x8C61;&#x539F;&#x6765;&#x7684;&#x503C;&#x5982;&#x4E0B;</span>
+  <span class="hljs-comment">// {</span>
+  <span class="hljs-comment">//   value: specifiedFunction,</span>
+  <span class="hljs-comment">//   enumerable: false,</span>
+  <span class="hljs-comment">//   configurable: true,</span>
+  <span class="hljs-comment">//   writable: true</span>
+  <span class="hljs-comment">// };</span>
+  descriptor.writable = <span class="hljs-literal">false</span>;
+  <span class="hljs-keyword">return</span> descriptor;
+}
+
+readonly(Person.prototype, <span class="hljs-string">&apos;name&apos;</span>, descriptor);
+<span class="hljs-comment">// &#x7C7B;&#x4F3C;&#x4E8E;</span>
+<span class="hljs-built_in">Object</span>.defineProperty(Person.prototype, <span class="hljs-string">&apos;name&apos;</span>, descriptor);
+</code></pre>
+<p>&#x88C5;&#x9970;&#x5668;&#x51FD;&#x6570;<code>readonly</code>&#x4E00;&#x5171;&#x53EF;&#x4EE5;&#x63A5;&#x53D7;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#x3002;</p>
+<ul>
+<li>&#x88C5;&#x9970;&#x5668;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x7C7B;&#x7684;&#x539F;&#x578B;&#x5BF9;&#x8C61;&#xFF0C;&#x4E0A;&#x4F8B;&#x662F;<code>Person.prototype</code>&#xFF0C;&#x88C5;&#x9970;&#x5668;&#x7684;&#x672C;&#x610F;&#x662F;&#x8981;&#x201C;&#x88C5;&#x9970;&#x201D;&#x7C7B;&#x7684;&#x5B9E;&#x4F8B;&#xFF0C;&#x4F46;&#x662F;&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x5B9E;&#x4F8B;&#x8FD8;&#x6CA1;&#x751F;&#x6210;&#xFF0C;&#x6240;&#x4EE5;&#x53EA;&#x80FD;&#x53BB;&#x88C5;&#x9970;&#x539F;&#x578B;&#xFF08;&#x8FD9;&#x4E0D;&#x540C;&#x4E8E;&#x7C7B;&#x7684;&#x88C5;&#x9970;&#xFF0C;&#x90A3;&#x79CD;&#x60C5;&#x51B5;&#x65F6;<code>target</code>&#x53C2;&#x6570;&#x6307;&#x7684;&#x662F;&#x7C7B;&#x672C;&#x8EAB;&#xFF09;&#xFF1B;</li>
+<li>&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x6240;&#x8981;&#x88C5;&#x9970;&#x7684;&#x5C5E;&#x6027;&#x540D;&#xFF1B;</li>
+<li>&#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x8BE5;&#x5C5E;&#x6027;&#x7684;&#x63CF;&#x8FF0;&#x5BF9;&#x8C61;&#x3002;</li>
+</ul>
+<p>&#x53E6;&#x5916;&#xFF0C;&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x8BF4;&#x660E;&#xFF0C;&#x88C5;&#x9970;&#x5668;&#xFF08;readonly&#xFF09;&#x4F1A;&#x4FEE;&#x6539;&#x5C5E;&#x6027;&#x7684;&#x63CF;&#x8FF0;&#x5BF9;&#x8C61;&#xFF08;descriptor&#xFF09;&#xFF0C;&#x7136;&#x540E;&#x88AB;&#x4FEE;&#x6539;&#x7684;&#x63CF;&#x8FF0;&#x5BF9;&#x8C61;&#x518D;&#x7528;&#x6765;&#x5B9A;&#x4E49;&#x5C5E;&#x6027;&#x3002;</p>
+<h3 id="22-&#x4E3E;&#x4F8B;"><a name="22-&#x4E3E;&#x4F8B;" class="anchor-navigation-ex-anchor" href="#22-&#x4E3E;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>2.2 &#x4E3E;&#x4F8B;</h3>
+<p>&#x4E0B;&#x9762;&#x662F;&#x53E6;&#x4E00;&#x4E2A;&#x4F8B;&#x5B50;&#xFF0C;&#x4FEE;&#x6539;&#x5C5E;&#x6027;&#x63CF;&#x8FF0;&#x5BF9;&#x8C61;&#x7684;<code>enumerable</code>&#x5C5E;&#x6027;&#xFF0C;&#x4F7F;&#x5F97;&#x8BE5;&#x5C5E;&#x6027;&#x4E0D;&#x53EF;&#x904D;&#x5386;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span> </span>{
+  @nonenumerable
+  get kidCount() { <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.children.length; }
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">nonenumerable</span>(<span class="hljs-params">target, name, descriptor</span>) </span>{
+  descriptor.enumerable = <span class="hljs-literal">false</span>;
+  <span class="hljs-keyword">return</span> descriptor;
+}
+</code></pre>
+<p>&#x4E0B;&#x9762;&#x7684;<code>@log</code>&#x88C5;&#x9970;&#x5668;&#xFF0C;&#x53EF;&#x4EE5;&#x8D77;&#x5230;&#x8F93;&#x51FA;&#x65E5;&#x5FD7;&#x7684;&#x4F5C;&#x7528;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Math</span> </span>{
+  @log
+  add(a, b) {
+    <span class="hljs-keyword">return</span> a + b;
+  }
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">log</span>(<span class="hljs-params">target, name, descriptor</span>) </span>{
+  <span class="hljs-keyword">var</span> oldValue = descriptor.value;
+
+  descriptor.value = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Calling <span class="hljs-subst">${name}</span> with`</span>, <span class="hljs-built_in">arguments</span>);
+    <span class="hljs-keyword">return</span> oldValue.apply(<span class="hljs-keyword">this</span>, <span class="hljs-built_in">arguments</span>);
+  };
+
+  <span class="hljs-keyword">return</span> descriptor;
+}
+
+<span class="hljs-keyword">const</span> math = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Math</span>();
+
+<span class="hljs-comment">// passed parameters should get logged now</span>
+math.add(<span class="hljs-number">2</span>, <span class="hljs-number">4</span>);
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;<code>@log</code>&#x88C5;&#x9970;&#x5668;&#x7684;&#x4F5C;&#x7528;&#x5C31;&#x662F;&#x5728;&#x6267;&#x884C;&#x539F;&#x59CB;&#x7684;&#x64CD;&#x4F5C;&#x4E4B;&#x524D;&#xFF0C;&#x6267;&#x884C;&#x4E00;&#x6B21;<code>console.log</code>&#xFF0C;&#x4ECE;&#x800C;&#x8FBE;&#x5230;&#x8F93;&#x51FA;&#x65E5;&#x5FD7;&#x7684;&#x76EE;&#x7684;&#x3002;</p>
+<h3 id="23-&#x88C5;&#x9970;&#x5668;&#x7684;&#x6CE8;&#x91CA;&#x4F5C;&#x7528;"><a name="23-&#x88C5;&#x9970;&#x5668;&#x7684;&#x6CE8;&#x91CA;&#x4F5C;&#x7528;" class="anchor-navigation-ex-anchor" href="#23-&#x88C5;&#x9970;&#x5668;&#x7684;&#x6CE8;&#x91CA;&#x4F5C;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>2.3 &#x88C5;&#x9970;&#x5668;&#x7684;&#x6CE8;&#x91CA;&#x4F5C;&#x7528;</h3>
+<p>&#x88C5;&#x9970;&#x5668;&#x6709;&#x6CE8;&#x91CA;&#x7684;&#x4F5C;&#x7528;&#x3002;</p>
+<pre><code class="lang-javascript">@testable
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span> </span>{
+  @readonly
+  @nonenumerable
+  name() { <span class="hljs-keyword">return</span> <span class="hljs-string">`<span class="hljs-subst">${this.first}</span> <span class="hljs-subst">${this.last}</span>`</span> }
+}
+</code></pre>
+<p>&#x4ECE;&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x4E00;&#x773C;&#x5C31;&#x80FD;&#x770B;&#x51FA;&#xFF0C;<code>Person</code>&#x7C7B;&#x662F;&#x53EF;&#x6D4B;&#x8BD5;&#x7684;&#xFF0C;&#x800C;<code>name</code>&#x65B9;&#x6CD5;&#x662F;&#x53EA;&#x8BFB;&#x548C;&#x4E0D;&#x53EF;&#x679A;&#x4E3E;&#x7684;&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x662F;&#x4F7F;&#x7528; Decorator &#x5199;&#x6CD5;&#x7684;<a href="https://github.com/ionic-team/stencil" target="_blank">&#x7EC4;&#x4EF6;</a>&#xFF0C;&#x770B;&#x4E0A;&#x53BB;&#x4E00;&#x76EE;&#x4E86;&#x7136;&#x3002;</p>
+<pre><code class="lang-javascript">@Component({
+  tag: <span class="hljs-string">&apos;my-component&apos;</span>,
+  styleUrl: <span class="hljs-string">&apos;my-component.scss&apos;</span>
+})
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyComponent</span> </span>{
+  @Prop() first: string;
+  @Prop() last: string;
+  @State() isVisible: boolean = <span class="hljs-literal">true</span>;
+
+  render() {
+    <span class="hljs-keyword">return</span> (
+      <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Hello, my name is {this.first} {this.last}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span>
+    );
+  }
+}
+</code></pre>
+<h3 id="24-&#x591A;&#x4E2A;&#x88C5;&#x9970;&#x5668;&#x7684;&#x6267;&#x884C;&#x987A;&#x5E8F;"><a name="24-&#x591A;&#x4E2A;&#x88C5;&#x9970;&#x5668;&#x7684;&#x6267;&#x884C;&#x987A;&#x5E8F;" class="anchor-navigation-ex-anchor" href="#24-&#x591A;&#x4E2A;&#x88C5;&#x9970;&#x5668;&#x7684;&#x6267;&#x884C;&#x987A;&#x5E8F;"><i class="fa fa-link" aria-hidden="true"></i></a>2.4 &#x591A;&#x4E2A;&#x88C5;&#x9970;&#x5668;&#x7684;&#x6267;&#x884C;&#x987A;&#x5E8F;</h3>
+<p>&#x5982;&#x679C;&#x540C;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;&#x6709;&#x591A;&#x4E2A;&#x88C5;&#x9970;&#x5668;&#xFF0C;&#x4F1A;&#x50CF;&#x5265;&#x6D0B;&#x8471;&#x4E00;&#x6837;&#xFF0C;&#x5148;&#x4ECE;&#x5916;&#x5230;&#x5185;&#x8FDB;&#x5165;&#xFF0C;&#x7136;&#x540E;&#x7531;&#x5185;&#x5411;&#x5916;&#x6267;&#x884C;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">dec</span>(<span class="hljs-params">id</span>)</span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;evaluated&apos;</span>, id);
+  <span class="hljs-keyword">return</span> (target, property, descriptor) =&gt; <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;executed&apos;</span>, id);
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Example</span> </span>{
+    @dec(<span class="hljs-number">1</span>)
+    @dec(<span class="hljs-number">2</span>)
+    method(){}
+}
+<span class="hljs-comment">// evaluated 1</span>
+<span class="hljs-comment">// evaluated 2</span>
+<span class="hljs-comment">// executed 2</span>
+<span class="hljs-comment">// executed 1</span>
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;&#x5916;&#x5C42;&#x88C5;&#x9970;&#x5668;<code>@dec(1)</code>&#x5148;&#x8FDB;&#x5165;&#xFF0C;&#x4F46;&#x662F;&#x5185;&#x5C42;&#x88C5;&#x9970;&#x5668;<code>@dec(2)</code>&#x5148;&#x6267;&#x884C;&#x3002;</p>
+<p>&#x9664;&#x4E86;&#x6CE8;&#x91CA;&#xFF0C;&#x88C5;&#x9970;&#x5668;&#x8FD8;&#x80FD;&#x7528;&#x6765;<strong>&#x7C7B;&#x578B;&#x68C0;&#x67E5;</strong>&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x5BF9;&#x4E8E;&#x7C7B;&#x6765;&#x8BF4;&#xFF0C;&#x8FD9;&#x9879;&#x529F;&#x80FD;&#x76F8;&#x5F53;&#x6709;&#x7528;&#x3002;&#x4ECE;&#x957F;&#x671F;&#x6765;&#x770B;&#xFF0C;&#x5B83;&#x5C06;&#x662F; JavaScript &#x4EE3;&#x7801;&#x9759;&#x6001;&#x5206;&#x6790;&#x7684;&#x91CD;&#x8981;&#x5DE5;&#x5177;&#x3002;</p>
+<h2 id="&#x4E09;&#x3001;&#x4E3A;&#x4EC0;&#x4E48;&#x88C5;&#x9970;&#x5668;&#x4E0D;&#x80FD;&#x7528;&#x4E8E;&#x51FD;&#x6570;&#xFF1F;"><a name="&#x4E09;&#x3001;&#x4E3A;&#x4EC0;&#x4E48;&#x88C5;&#x9970;&#x5668;&#x4E0D;&#x80FD;&#x7528;&#x4E8E;&#x51FD;&#x6570;&#xFF1F;" class="anchor-navigation-ex-anchor" href="#&#x4E09;&#x3001;&#x4E3A;&#x4EC0;&#x4E48;&#x88C5;&#x9970;&#x5668;&#x4E0D;&#x80FD;&#x7528;&#x4E8E;&#x51FD;&#x6570;&#xFF1F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E09;&#x3001;&#x4E3A;&#x4EC0;&#x4E48;&#x88C5;&#x9970;&#x5668;&#x4E0D;&#x80FD;&#x7528;&#x4E8E;&#x51FD;&#x6570;&#xFF1F;</h2>
+<p>&#x88C5;&#x9970;&#x5668;&#x53EA;&#x80FD;&#x7528;&#x4E8E;&#x7C7B;&#x548C;&#x7C7B;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x4E0D;&#x80FD;&#x7528;&#x4E8E;&#x51FD;&#x6570;&#xFF0C;&#x56E0;&#x4E3A;&#x5B58;&#x5728;&#x51FD;&#x6570;&#x63D0;&#x5347;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> counter = <span class="hljs-number">0</span>;
+
+<span class="hljs-keyword">var</span> add = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+  counter++;
+};
+
+@add
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">foo</span>(<span class="hljs-params"></span>) </span>{
+}
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x610F;&#x56FE;&#x662F;&#x6267;&#x884C;&#x540E;<code>counter</code>&#x7B49;&#x4E8E; 1&#xFF0C;&#x4F46;&#x662F;&#x5B9E;&#x9645;&#x4E0A;&#x7ED3;&#x679C;&#x662F;<code>counter</code>&#x7B49;&#x4E8E; 0&#x3002;&#x56E0;&#x4E3A;&#x51FD;&#x6570;&#x63D0;&#x5347;&#xFF0C;&#x4F7F;&#x5F97;&#x5B9E;&#x9645;&#x6267;&#x884C;&#x7684;&#x4EE3;&#x7801;&#x662F;&#x4E0B;&#x9762;&#x8FD9;&#x6837;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// JavaScript&#x5F15;&#x64CE;&#x5728;&#x5BF9;JavaScript&#x4EE3;&#x7801;&#x8FDB;&#x884C;&#x89E3;&#x91CA;&#x6267;&#x884C;&#x4E4B;&#x524D;&#xFF0C;&#x4F1A;&#x5BF9;JavaScript&#x4EE3;&#x7801;&#x8FDB;&#x884C;&#x9884;&#x89E3;&#x6790;&#xFF0C;&#x5728;&#x9884;&#x89E3;&#x6790;&#x9636;&#x6BB5;&#xFF0C;&#x4F1A;&#x5C06;&#x4EE5;&#x5173;&#x952E;&#x5B57;var&#x548C;function&#x5F00;&#x5934;&#x7684;&#x8BED;&#x53E5;&#x5757;&#x63D0;&#x524D;&#x8FDB;&#x884C;&#x5904;&#x7406;&#x3002;&#x5C06;&#x53D8;&#x91CF;&#x548C;&#x51FD;&#x6570;&#x7684;&lt;&#x58F0;&#x660E;&gt;&#x4F1A;&#x88AB;&#x63D0;&#x5347;&#x5230;&#x4F5C;&#x7528;&#x57DF;&#x7684;&#x5F00;&#x5934;&#x3002;</span>
+<span class="hljs-keyword">var</span> counter;
+<span class="hljs-keyword">var</span> add;
+
+@add
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">foo</span>(<span class="hljs-params"></span>) </span>{
+}
+
+<span class="hljs-comment">// &#x58F0;&#x660E;&#x90FD;&#x88AB;&#x63D0;&#x5347;&#x4E86;&#xFF0C;&#x5B9A;&#x4E49;&#x7559;&#x5728;&#x539F;&#x5730;</span>
+counter = <span class="hljs-number">0</span>;
+
+add = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+  counter++;
+};
+</code></pre>
+<p>&#x4E0B;&#x9762;&#x662F;&#x53E6;&#x4E00;&#x4E2A;&#x4F8B;&#x5B50;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> readOnly = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;some-decorator&quot;</span>);
+
+@readOnly
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">foo</span>(<span class="hljs-params"></span>) </span>{
+}
+
+<span class="hljs-comment">// ======= &#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x4E5F;&#x6709;&#x95EE;&#x9898;&#xFF0C;&#x56E0;&#x4E3A;&#x5B9E;&#x9645;&#x6267;&#x884C;&#x662F;&#x4E0B;&#x9762;&#x8FD9;&#x6837;&#x3002;</span>
+
+<span class="hljs-keyword">var</span> readOnly;
+
+@readOnly
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">foo</span>(<span class="hljs-params"></span>) </span>{
+}
+
+readOnly = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;some-decorator&quot;</span>);
+</code></pre>
+<p>&#x603B;&#x4E4B;&#xFF0C;&#x7531;&#x4E8E;&#x5B58;&#x5728;&#x51FD;&#x6570;&#x63D0;&#x5347;&#xFF0C;&#x4F7F;&#x5F97;&#x88C5;&#x9970;&#x5668;&#x4E0D;&#x80FD;&#x7528;&#x4E8E;&#x51FD;&#x6570;&#x3002;&#x7C7B;&#x662F;&#x4E0D;&#x4F1A;&#x63D0;&#x5347;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x5C31;&#x6CA1;&#x6709;&#x8FD9;&#x65B9;&#x9762;&#x7684;&#x95EE;&#x9898;&#x3002;</p>
+<p>&#x53E6;&#x4E00;&#x65B9;&#x9762;&#xFF0C;&#x5982;&#x679C;&#x4E00;&#x5B9A;&#x8981;&#x88C5;&#x9970;&#x51FD;&#x6570;&#xFF0C;&#x53EF;&#x4EE5;&#x91C7;&#x7528;&#x9AD8;&#x9636;&#x51FD;&#x6570;&#x7684;&#x5F62;&#x5F0F;&#x76F4;&#x63A5;&#x6267;&#x884C;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">doSomething</span>(<span class="hljs-params">name</span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Hello, &apos;</span> + name);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">loggingDecorator</span>(<span class="hljs-params">wrapped</span>) </span>{
+  <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Starting&apos;</span>);
+    <span class="hljs-keyword">const</span> result = wrapped.apply(<span class="hljs-keyword">this</span>, <span class="hljs-built_in">arguments</span>);
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Finished&apos;</span>);
+    <span class="hljs-keyword">return</span> result;
+  }
+}
+
+<span class="hljs-keyword">const</span> wrapped = loggingDecorator(doSomething);
+</code></pre>
+<h2 id="&#x56DB;&#x3001;core-decoratorsjs"><a name="&#x56DB;&#x3001;core-decoratorsjs" class="anchor-navigation-ex-anchor" href="#&#x56DB;&#x3001;core-decoratorsjs"><i class="fa fa-link" aria-hidden="true"></i></a>&#x56DB;&#x3001;core-decorators.js</h2>
+<p><a href="https://github.com/jayphelps/core-decorators.js" target="_blank">core-decorators.js</a>&#x662F;&#x4E00;&#x4E2A;&#x7B2C;&#x4E09;&#x65B9;&#x6A21;&#x5757;&#xFF0C;&#x63D0;&#x4F9B;&#x4E86;&#x51E0;&#x4E2A;&#x5E38;&#x89C1;&#x7684;&#x88C5;&#x9970;&#x5668;&#xFF0C;&#x901A;&#x8FC7;&#x5B83;&#x53EF;&#x4EE5;&#x66F4;&#x597D;&#x5730;&#x7406;&#x89E3;&#x88C5;&#x9970;&#x5668;&#x3002;</p>
+<h3 id="41-autobind"><a name="41-autobind" class="anchor-navigation-ex-anchor" href="#41-autobind"><i class="fa fa-link" aria-hidden="true"></i></a>4.1 @autobind</h3>
+<p><code>autobind</code>&#x88C5;&#x9970;&#x5668;&#x4F7F;&#x5F97;&#x65B9;&#x6CD5;&#x4E2D;&#x7684;<code>this</code>&#x5BF9;&#x8C61;&#xFF0C;&#x7ED1;&#x5B9A;&#x539F;&#x59CB;&#x5BF9;&#x8C61;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> { autobind } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;core-decorators&apos;</span>;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span> </span>{
+  @autobind
+  getPerson() {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>;
+  }
+}
+
+<span class="hljs-keyword">let</span> person = <span class="hljs-keyword">new</span> Person();
+<span class="hljs-keyword">let</span> getPerson = person.getPerson;
+
+getPerson() === person;
+<span class="hljs-comment">// true</span>
+</code></pre>
+<h3 id="42-readonly"><a name="42-readonly" class="anchor-navigation-ex-anchor" href="#42-readonly"><i class="fa fa-link" aria-hidden="true"></i></a>4.2 @readonly</h3>
+<p><code>readonly</code>&#x88C5;&#x9970;&#x5668;&#x4F7F;&#x5F97;&#x5C5E;&#x6027;&#x6216;&#x65B9;&#x6CD5;&#x4E0D;&#x53EF;&#x5199;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> { readonly } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;core-decorators&apos;</span>;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Meal</span> </span>{
+  @readonly
+  entree = <span class="hljs-string">&apos;steak&apos;</span>;
+}
+
+<span class="hljs-keyword">var</span> dinner = <span class="hljs-keyword">new</span> Meal();
+dinner.entree = <span class="hljs-string">&apos;salmon&apos;</span>;
+<span class="hljs-comment">// Cannot assign to read only property &apos;entree&apos; of [object Object]</span>
+</code></pre>
+<h3 id="43-override"><a name="43-override" class="anchor-navigation-ex-anchor" href="#43-override"><i class="fa fa-link" aria-hidden="true"></i></a>4.3 @override</h3>
+<p><code>override</code>&#x88C5;&#x9970;&#x5668;&#x68C0;&#x67E5;&#x5B50;&#x7C7B;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x662F;&#x5426;&#x6B63;&#x786E;&#x8986;&#x76D6;&#x4E86;&#x7236;&#x7C7B;&#x7684;&#x540C;&#x540D;&#x65B9;&#x6CD5;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x6B63;&#x786E;&#x4F1A;&#x62A5;&#x9519;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> { override } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;core-decorators&apos;</span>;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Parent</span> </span>{
+  speak(first, second) {}
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Child</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Parent</span> </span>{
+  @override
+  speak() {}
+  <span class="hljs-comment">// SyntaxError: Child#speak() does not properly override Parent#speak(first, second)</span>
+}
+
+<span class="hljs-comment">// or</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Child</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Parent</span> </span>{
+  @override
+  speaks() {}
+  <span class="hljs-comment">// SyntaxError: No descriptor matching Child#speaks() was found on the prototype chain.</span>
+  <span class="hljs-comment">//</span>
+  <span class="hljs-comment">//   Did you mean &quot;speak&quot;?</span>
+}
+</code></pre>
+<h3 id="44-deprecate-&#x522B;&#x540D;deprecated"><a name="44-deprecate-&#x522B;&#x540D;deprecated" class="anchor-navigation-ex-anchor" href="#44-deprecate-&#x522B;&#x540D;deprecated"><i class="fa fa-link" aria-hidden="true"></i></a>4.4 @deprecate (&#x522B;&#x540D;@deprecated)</h3>
+<p><code>deprecate</code>&#x6216;<code>deprecated</code>&#x88C5;&#x9970;&#x5668;&#x5728;&#x63A7;&#x5236;&#x53F0;&#x663E;&#x793A;&#x4E00;&#x6761;&#x8B66;&#x544A;&#xFF0C;&#x8868;&#x793A;&#x8BE5;&#x65B9;&#x6CD5;&#x5C06;&#x5E9F;&#x9664;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> { deprecate } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;core-decorators&apos;</span>;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span> </span>{
+  @deprecate
+  facepalm() {}
+
+  @deprecate(<span class="hljs-string">&apos;We stopped facepalming&apos;</span>)
+  facepalmHard() {}
+
+  @deprecate(<span class="hljs-string">&apos;We stopped facepalming&apos;</span>, { url: <span class="hljs-string">&apos;http://knowyourmeme.com/memes/facepalm&apos;</span> })
+  facepalmHarder() {}
+}
+
+<span class="hljs-keyword">let</span> person = <span class="hljs-keyword">new</span> Person();
+
+person.facepalm();
+<span class="hljs-comment">// DEPRECATION Person#facepalm: This function will be removed in future versions.</span>
+
+person.facepalmHard();
+<span class="hljs-comment">// DEPRECATION Person#facepalmHard: We stopped facepalming</span>
+
+person.facepalmHarder();
+<span class="hljs-comment">// DEPRECATION Person#facepalmHarder: We stopped facepalming</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">//     See http://knowyourmeme.com/memes/facepalm for more details.</span>
+<span class="hljs-comment">//</span>
+</code></pre>
+<h3 id="45-suppresswarnings"><a name="45-suppresswarnings" class="anchor-navigation-ex-anchor" href="#45-suppresswarnings"><i class="fa fa-link" aria-hidden="true"></i></a>4.5 @suppressWarnings</h3>
+<p><code>suppressWarnings</code>&#x88C5;&#x9970;&#x5668;&#x6291;&#x5236;<code>deprecated</code>&#x88C5;&#x9970;&#x5668;&#x5BFC;&#x81F4;&#x7684;<code>console.warn()</code>&#x8C03;&#x7528;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x5F02;&#x6B65;&#x4EE3;&#x7801;&#x53D1;&#x51FA;&#x7684;&#x8C03;&#x7528;&#x9664;&#x5916;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> { suppressWarnings } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;core-decorators&apos;</span>;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span> </span>{
+  @deprecated
+  facepalm() {}
+
+  @suppressWarnings
+  facepalmWithoutWarning() {
+    <span class="hljs-keyword">this</span>.facepalm();
+  }
+}
+
+<span class="hljs-keyword">let</span> person = <span class="hljs-keyword">new</span> Person();
+
+person.facepalmWithoutWarning();
+<span class="hljs-comment">// no warning is logged</span>
+</code></pre>
+<h2 id="&#x4E94;&#x3001;&#x4F7F;&#x7528;&#x88C5;&#x9970;&#x5668;&#x5B9E;&#x73B0;&#x81EA;&#x52A8;&#x53D1;&#x5E03;&#x4E8B;&#x4EF6;"><a name="&#x4E94;&#x3001;&#x4F7F;&#x7528;&#x88C5;&#x9970;&#x5668;&#x5B9E;&#x73B0;&#x81EA;&#x52A8;&#x53D1;&#x5E03;&#x4E8B;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#&#x4E94;&#x3001;&#x4F7F;&#x7528;&#x88C5;&#x9970;&#x5668;&#x5B9E;&#x73B0;&#x81EA;&#x52A8;&#x53D1;&#x5E03;&#x4E8B;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E94;&#x3001;&#x4F7F;&#x7528;&#x88C5;&#x9970;&#x5668;&#x5B9E;&#x73B0;&#x81EA;&#x52A8;&#x53D1;&#x5E03;&#x4E8B;&#x4EF6;</h2>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x88C5;&#x9970;&#x5668;&#xFF0C;&#x4F7F;&#x5F97;&#x5BF9;&#x8C61;&#x7684;&#x65B9;&#x6CD5;&#x88AB;&#x8C03;&#x7528;&#x65F6;&#xFF0C;&#x81EA;&#x52A8;&#x53D1;&#x51FA;&#x4E00;&#x4E2A;&#x4E8B;&#x4EF6;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> postal = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;postal/lib/postal.lodash&quot;</span>);
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">publish</span>(<span class="hljs-params">topic, channel</span>) </span>{
+  <span class="hljs-keyword">const</span> channelName = channel || <span class="hljs-string">&apos;/&apos;</span>;
+  <span class="hljs-keyword">const</span> msgChannel = postal.channel(channelName);
+  msgChannel.subscribe(topic, v =&gt; {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x9891;&#x9053;: &apos;</span>, channelName);
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x4E8B;&#x4EF6;: &apos;</span>, topic);
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#x6570;&#x636E;: &apos;</span>, v);
+  });
+
+  <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">target, name, descriptor</span>) </span>{
+    <span class="hljs-keyword">const</span> fn = descriptor.value;
+
+    descriptor.value = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+      <span class="hljs-keyword">let</span> value = fn.apply(<span class="hljs-keyword">this</span>, <span class="hljs-built_in">arguments</span>);
+      msgChannel.publish(topic, value);
+    };
+  };
+}
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A;&#x540D;&#x4E3A;<code>publish</code>&#x7684;&#x88C5;&#x9970;&#x5668;&#xFF0C;&#x5B83;&#x901A;&#x8FC7;&#x6539;&#x5199;<code>descriptor.value</code>&#xFF0C;&#x4F7F;&#x5F97;&#x539F;&#x65B9;&#x6CD5;&#x88AB;&#x8C03;&#x7528;&#x65F6;&#xFF0C;&#x4F1A;&#x81EA;&#x52A8;&#x53D1;&#x51FA;&#x4E00;&#x4E2A;&#x4E8B;&#x4EF6;&#x3002;&#x5B83;&#x4F7F;&#x7528;&#x7684;&#x4E8B;&#x4EF6;&#x201C;&#x53D1;&#x5E03;/&#x8BA2;&#x9605;&#x201D;&#x5E93;&#x662F;<a href="https://github.com/postaljs/postal.js" target="_blank">Postal.js</a>&#x3002;</p>
+<p>&#x5B83;&#x7684;&#x7528;&#x6CD5;&#x5982;&#x4E0B;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// index.js</span>
+<span class="hljs-keyword">import</span> publish <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./publish&apos;</span>;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FooComponent</span> </span>{
+  @publish(<span class="hljs-string">&apos;foo.some.message&apos;</span>, <span class="hljs-string">&apos;component&apos;</span>)
+  someMethod() {
+    <span class="hljs-keyword">return</span> { my: <span class="hljs-string">&apos;data&apos;</span> };
+  }
+  @publish(<span class="hljs-string">&apos;foo.some.other&apos;</span>)
+  anotherMethod() {
+    <span class="hljs-comment">// ...</span>
+  }
+}
+
+<span class="hljs-keyword">let</span> foo = <span class="hljs-keyword">new</span> FooComponent();
+
+foo.someMethod();
+foo.anotherMethod();
+</code></pre>
+<p>&#x4EE5;&#x540E;&#xFF0C;&#x53EA;&#x8981;&#x8C03;&#x7528;<code>someMethod</code>&#x6216;&#x8005;<code>anotherMethod</code>&#xFF0C;&#x5C31;&#x4F1A;&#x81EA;&#x52A8;&#x53D1;&#x51FA;&#x4E00;&#x4E2A;&#x4E8B;&#x4EF6;&#x3002;</p>
+<pre><code class="lang-bash">$ bash-node index.js
+&#x9891;&#x9053;:  component
+&#x4E8B;&#x4EF6;:  foo.some.message
+&#x6570;&#x636E;:  { my: <span class="hljs-string">&apos;data&apos;</span> }
+
+&#x9891;&#x9053;:  /
+&#x4E8B;&#x4EF6;:  foo.some.other
+&#x6570;&#x636E;:  undefined
+</code></pre>
+<h2 id="&#x516D;&#x3001;mixin"><a name="&#x516D;&#x3001;mixin" class="anchor-navigation-ex-anchor" href="#&#x516D;&#x3001;mixin"><i class="fa fa-link" aria-hidden="true"></i></a>&#x516D;&#x3001;Mixin</h2>
+<p>&#x5728;&#x88C5;&#x9970;&#x5668;&#x7684;&#x57FA;&#x7840;&#x4E0A;&#xFF0C;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;<code>Mixin</code>&#x6A21;&#x5F0F;&#x3002;&#x6240;&#x8C13;<code>Mixin</code>&#x6A21;&#x5F0F;&#xFF0C;&#x5C31;&#x662F;&#x5BF9;&#x8C61;&#x7EE7;&#x627F;&#x7684;&#x4E00;&#x79CD;&#x66FF;&#x4EE3;&#x65B9;&#x6848;&#xFF0C;&#x4E2D;&#x6587;&#x8BD1;&#x4E3A;&#x201C;&#x6DF7;&#x5165;&#x201D;&#xFF08;mix in&#xFF09;&#xFF0C;&#x610F;&#x4E3A;&#x5728;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x4E4B;&#x4E2D;&#x6DF7;&#x5165;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x65B9;&#x6CD5;&#x3002;</p>
+<ul>
+<li><strong>Mixin</strong> &#x5373; <code>Mix-in</code>&#xFF0C;&#x5E38;&#x88AB;&#x8BD1;&#x4E3A;&#x201C;&#x6DF7;&#x5165;&#x201D;&#xFF0C;&#x662F;&#x4E00;&#x79CD;&#x7F16;&#x7A0B;&#x6A21;&#x5F0F;&#x3002;&#x5728;Python&#x3001;Vue&#x7B49;&#x5F88;&#x591A;&#x573A;&#x666F;&#x4E2D;&#x90FD;&#x6709;&#x4F7F;&#x7528;&#x3002;</li>
+<li>Mixin&#x662F;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7A0B;&#x5E8F;&#x8BBE;&#x8BA1;&#x8BED;&#x8A00;&#x4E2D;&#x7684;&#x7C7B;&#xFF0C;&#x63D0;&#x4F9B;&#x4E86;&#x65B9;&#x6CD5;&#x7684;&#x5B9E;&#x73B0;&#x3002;&#x5176;&#x4ED6;&#x7C7B;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;mixin&#x7C7B;&#x7684;&#x65B9;&#x6CD5;&#x800C;&#x4E0D;&#x5FC5;&#x6210;&#x4E3A;&#x5176;&#x5B50;&#x7C7B;&#x3002;<ul>
+<li>mixin&#x4E0E;&#x63A5;&#x53E3;&#x76F8;&#x540C;&#x7684;&#x5730;&#x65B9;&#x662F;&#x90FD;&#x53EF;&#x4EE5;&#x591A;&#x7EE7;&#x627F;&#xFF0C;&#x4E0D;&#x540C;&#x7684;&#x5730;&#x65B9;&#x5728;&#x4E8E;mixin&#x662F;&#x5E26;&#x5B9E;&#x73B0;&#x7684;&#x3002;Mixin&#x4E5F;&#x53EF;&#x4EE5;&#x770B;&#x4F5C;&#x662F;&#x5E26;&#x5B9E;&#x73B0;&#x7684;interface&#x3002;&#x8FD9;&#x79CD;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;&#x5B9E;&#x73B0;&#x4E86;&#x4F9D;&#x8D56;&#x53CD;&#x8F6C;&#x539F;&#x5219;&#x3002;</li>
+<li>mixin&#x4E3A;&#x4F7F;&#x7528;&#x5B83;&#x7684;class&#x63D0;&#x4F9B;&#x989D;&#x5916;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x4F46;&#x81EA;&#x8EAB;&#x5374;&#x4E0D;&#x5355;&#x72EC;&#x4F7F;&#x7528;&#xFF08;&#x4E0D;&#x80FD;&#x5355;&#x72EC;&#x751F;&#x6210;&#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;&#xFF0C;&#x5C5E;&#x4E8E;&#x62BD;&#x8C61;&#x7C7B;&#xFF09;&#x3002;</li>
+</ul>
+</li>
+<li><p>&#x56E0;&#x4E3A;&#x6709;&#x4EE5;&#x4E0A;&#x9650;&#x5236;&#xFF0C;Mixin&#x7C7B;&#x901A;&#x5E38;&#x4F5C;&#x4E3A;&#x529F;&#x80FD;&#x6A21;&#x5757;&#x4F7F;&#x7528;&#xFF0C;&#x5728;&#x9700;&#x8981;&#x8BE5;&#x529F;&#x80FD;&#x65F6;&#x201C;&#x6DF7;&#x5165;&#x201D;&#xFF0C;&#x800C;&#x4E14;&#x4E0D;&#x4F1A;&#x4F7F;&#x7C7B;&#x7684;&#x5173;&#x7CFB;&#x53D8;&#x5F97;&#x590D;&#x6742;&#x3002;&#x7528;&#x6237;&#x4E0E;Mixin&#x4E0D;&#x662F;&#x201C;is-a&#x201D;&#x7684;&#x5173;&#x7CFB;&#xFF0C;&#x800C;&#x662F;&#x201C;-able&#x201D;&#x5173;&#x7CFB;</p>
+</li>
+<li><p>Mixin&#x6709;&#x5229;&#x4E8E;&#x4EE3;&#x7801;&#x590D;&#x7528;&#xFF0C;&#x53C8;&#x907F;&#x514D;&#x4E86;&#x591A;&#x7EE7;&#x627F;&#x7684;&#x590D;&#x6742;(&#x7EC4;&#x5408;&#x4F18;&#x4E8E;&#x7EE7;&#x627F;)&#x3002;&#x4F7F;&#x7528;Mixin&#x4EAB;&#x6709;&#x5355;&#x4E00;&#x7EE7;&#x627F;&#x7684;&#x5355;&#x7EAF;&#x6027;&#x548C;&#x591A;&#x91CD;&#x7EE7;&#x627F;&#x7684;&#x5171;&#x6709;&#x6027;&#x3002;</p>
+</li>
+</ul>
+<p>&#x8BF7;&#x770B;&#x4E0B;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> Foo = {
+  foo() { <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;foo&apos;</span>) }
+};
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyClass</span> </span>{}
+
+<span class="hljs-built_in">Object</span>.assign(MyClass.prototype, Foo);
+
+<span class="hljs-keyword">let</span> obj = <span class="hljs-keyword">new</span> MyClass();
+obj.foo() <span class="hljs-comment">// &apos;foo&apos;</span>
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x4E4B;&#x4E2D;&#xFF0C;&#x5BF9;&#x8C61;<code>Foo</code>&#x6709;&#x4E00;&#x4E2A;<code>foo</code>&#x65B9;&#x6CD5;&#xFF0C;&#x901A;&#x8FC7;<code>Object.assign</code>&#x65B9;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;<code>foo</code>&#x65B9;&#x6CD5;&#x201C;&#x6DF7;&#x5165;&#x201D;<code>MyClass</code>&#x7C7B;&#xFF0C;&#x5BFC;&#x81F4;<code>MyClass</code>&#x7684;&#x5B9E;&#x4F8B;<code>obj</code>&#x5BF9;&#x8C61;&#x90FD;&#x5177;&#x6709;<code>foo</code>&#x65B9;&#x6CD5;&#x3002;&#x8FD9;&#x5C31;&#x662F;&#x201C;&#x6DF7;&#x5165;&#x201D;&#x6A21;&#x5F0F;&#x7684;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x5B9E;&#x73B0;&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#xFF0C;&#x6211;&#x4EEC;&#x90E8;&#x7F72;&#x4E00;&#x4E2A;&#x901A;&#x7528;&#x811A;&#x672C;<code>mixins.js</code>&#xFF0C;&#x5C06; Mixin &#x5199;&#x6210;&#x4E00;&#x4E2A;&#x88C5;&#x9970;&#x5668;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">mixins</span>(<span class="hljs-params">...list</span>) </span>{
+  <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">target</span>) </span>{
+    <span class="hljs-built_in">Object</span>.assign(target.prototype, ...list);
+  };
+}
+</code></pre>
+<p>&#x7136;&#x540E;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E0A;&#x9762;&#x8FD9;&#x4E2A;&#x88C5;&#x9970;&#x5668;&#xFF0C;&#x4E3A;&#x7C7B;&#x201C;&#x6DF7;&#x5165;&#x201D;&#x5404;&#x79CD;&#x65B9;&#x6CD5;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> { mixins } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./mixins&apos;</span>;
+
+<span class="hljs-keyword">const</span> Foo = {
+  foo() { <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;foo&apos;</span>) }
+};
+
+@mixins(Foo)
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyClass</span> </span>{}
+
+<span class="hljs-keyword">let</span> obj = <span class="hljs-keyword">new</span> MyClass();
+obj.foo() <span class="hljs-comment">// &quot;foo&quot;</span>
+</code></pre>
+<p>&#x901A;&#x8FC7;<code>mixins</code>&#x8FD9;&#x4E2A;&#x88C5;&#x9970;&#x5668;&#xFF0C;&#x5B9E;&#x73B0;&#x4E86;&#x5728;<code>MyClass</code>&#x7C7B;&#x4E0A;&#x9762;&#x201C;&#x6DF7;&#x5165;&#x201D;<code>Foo</code>&#x5BF9;&#x8C61;&#x7684;<code>foo</code>&#x65B9;&#x6CD5;&#x3002;</p>
+<p>&#x4E0D;&#x8FC7;&#xFF0C;&#x4E0A;&#x9762;&#x7684;&#x65B9;&#x6CD5;&#x4F1A;&#x6539;&#x5199;<code>MyClass</code>&#x7C7B;&#x7684;<code>prototype</code>&#x5BF9;&#x8C61;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x559C;&#x6B22;&#x8FD9;&#x4E00;&#x70B9;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x7C7B;&#x7684;&#x7EE7;&#x627F;&#x5B9E;&#x73B0; Mixin&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyClass</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">MyBaseClass</span> </span>{
+  <span class="hljs-comment">/* ... */</span>
+}
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;<code>MyClass</code>&#x7EE7;&#x627F;&#x4E86;<code>MyBaseClass</code>&#x3002;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x60F3;&#x5728;<code>MyClass</code>&#x91CC;&#x9762;&#x201C;&#x6DF7;&#x5165;&#x201D;&#x4E00;&#x4E2A;<code>foo</code>&#x65B9;&#x6CD5;&#xFF0C;&#x4E00;&#x4E2A;&#x529E;&#x6CD5;&#x662F;&#x5728;<code>MyClass</code>&#x548C;<code>MyBaseClass</code>&#x4E4B;&#x95F4;&#x63D2;&#x5165;&#x4E00;&#x4E2A;&#x6DF7;&#x5165;&#x7C7B;&#xFF0C;&#x8FD9;&#x4E2A;&#x7C7B;&#x5177;&#x6709;<code>foo</code>&#x65B9;&#x6CD5;&#xFF0C;&#x5E76;&#x4E14;&#x7EE7;&#x627F;&#x4E86;<code>MyBaseClass</code>&#x7684;&#x6240;&#x6709;&#x65B9;&#x6CD5;&#xFF0C;&#x7136;&#x540E;<code>MyClass</code>&#x518D;&#x7EE7;&#x627F;&#x8FD9;&#x4E2A;&#x7C7B;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> MyMixin = (superclass) =&gt; <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">superclass</span> </span>{
+  foo() {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;foo from MyMixin&apos;</span>);
+  }
+};
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;<code>MyMixin</code>&#x662F;&#x4E00;&#x4E2A;&#x6DF7;&#x5165;&#x7C7B;&#x751F;&#x6210;&#x5668;&#xFF0C;&#x63A5;&#x53D7;<code>superclass</code>&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#xFF0C;&#x7136;&#x540E;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x7EE7;&#x627F;<code>superclass</code>&#x7684;&#x5B50;&#x7C7B;&#xFF0C;&#x8BE5;&#x5B50;&#x7C7B;&#x5305;&#x542B;&#x4E00;&#x4E2A;<code>foo</code>&#x65B9;&#x6CD5;&#x3002;</p>
+<p>&#x63A5;&#x7740;&#xFF0C;&#x76EE;&#x6807;&#x7C7B;&#x518D;&#x53BB;&#x7EE7;&#x627F;&#x8FD9;&#x4E2A;&#x6DF7;&#x5165;&#x7C7B;&#xFF0C;&#x5C31;&#x8FBE;&#x5230;&#x4E86;&#x201C;&#x6DF7;&#x5165;&#x201D;<code>foo</code>&#x65B9;&#x6CD5;&#x7684;&#x76EE;&#x7684;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyClass</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">MyMixin</span>(<span class="hljs-title">MyBaseClass</span>) </span>{
+  <span class="hljs-comment">/* ... */</span>
+}
+
+<span class="hljs-keyword">let</span> c = <span class="hljs-keyword">new</span> MyClass();
+c.foo(); <span class="hljs-comment">// &quot;foo from MyMixin&quot;</span>
+</code></pre>
+<p>&#x5982;&#x679C;&#x9700;&#x8981;&#x201C;&#x6DF7;&#x5165;&#x201D;&#x591A;&#x4E2A;&#x65B9;&#x6CD5;&#xFF0C;&#x5C31;&#x751F;&#x6210;&#x591A;&#x4E2A;&#x6DF7;&#x5165;&#x7C7B;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyClass</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Mixin1</span>(<span class="hljs-title">Mixin2</span>(<span class="hljs-title">MyBaseClass</span>)) </span>{
+  <span class="hljs-comment">/* ... */</span>
+}
+</code></pre>
+<p>&#x8FD9;&#x79CD;&#x5199;&#x6CD5;&#x7684;&#x4E00;&#x4E2A;&#x597D;&#x5904;&#xFF0C;&#x662F;&#x53EF;&#x4EE5;&#x8C03;&#x7528;<code>super</code>&#xFF0C;&#x56E0;&#x6B64;&#x53EF;&#x4EE5;&#x907F;&#x514D;&#x5728;&#x201C;&#x6DF7;&#x5165;&#x201D;&#x8FC7;&#x7A0B;&#x4E2D;&#x8986;&#x76D6;&#x7236;&#x7C7B;&#x7684;&#x540C;&#x540D;&#x65B9;&#x6CD5;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> Mixin1 = (superclass) =&gt; <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">superclass</span> </span>{
+  foo() {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;foo from Mixin1&apos;</span>);
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">super</span>.foo) <span class="hljs-keyword">super</span>.foo();
+  }
+};
+
+<span class="hljs-keyword">let</span> Mixin2 = (superclass) =&gt; <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">superclass</span> </span>{
+  foo() {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;foo from Mixin2&apos;</span>);
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">super</span>.foo) <span class="hljs-keyword">super</span>.foo();
+  }
+};
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">S</span> </span>{
+  foo() {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;foo from S&apos;</span>);
+  }
+}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">C</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Mixin1</span>(<span class="hljs-title">Mixin2</span>(<span class="hljs-title">S</span>)) </span>{
+  foo() {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;foo from C&apos;</span>);
+    <span class="hljs-keyword">super</span>.foo();
+  }
+}
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;&#x6BCF;&#x4E00;&#x6B21;<code>&#x6DF7;&#x5165;</code>&#x53D1;&#x751F;&#x65F6;&#xFF0C;&#x90FD;&#x8C03;&#x7528;&#x4E86;&#x7236;&#x7C7B;&#x7684;<code>super.foo</code>&#x65B9;&#x6CD5;&#xFF0C;&#x5BFC;&#x81F4;&#x7236;&#x7C7B;&#x7684;&#x540C;&#x540D;&#x65B9;&#x6CD5;&#x6CA1;&#x6709;&#x88AB;&#x8986;&#x76D6;&#xFF0C;&#x884C;&#x4E3A;&#x88AB;&#x4FDD;&#x7559;&#x4E86;&#x4E0B;&#x6765;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">new</span> C().foo()
+<span class="hljs-comment">// foo from C</span>
+<span class="hljs-comment">// foo from Mixin1</span>
+<span class="hljs-comment">// foo from Mixin2</span>
+<span class="hljs-comment">// foo from S</span>
+</code></pre>
+<h2 id="&#x4E03;&#x3001;trait"><a name="&#x4E03;&#x3001;trait" class="anchor-navigation-ex-anchor" href="#&#x4E03;&#x3001;trait"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E03;&#x3001;Trait</h2>
+<p>Trait &#x4E5F;&#x662F;&#x4E00;&#x79CD;&#x88C5;&#x9970;&#x5668;&#xFF0C;&#x6548;&#x679C;&#x4E0E; Mixin &#x7C7B;&#x4F3C;&#xFF0C;&#x4F46;&#x662F;&#x63D0;&#x4F9B;&#x66F4;&#x591A;&#x529F;&#x80FD;&#xFF0C;&#x6BD4;&#x5982;&#x9632;&#x6B62;&#x540C;&#x540D;&#x65B9;&#x6CD5;&#x7684;&#x51B2;&#x7A81;&#x3001;&#x6392;&#x9664;&#x6DF7;&#x5165;&#x67D0;&#x4E9B;&#x65B9;&#x6CD5;&#x3001;&#x4E3A;&#x6DF7;&#x5165;&#x7684;&#x65B9;&#x6CD5;&#x8D77;&#x522B;&#x540D;&#x7B49;&#x7B49;&#x3002;</p>
+<p>=======&#x4EE5;&#x4E0B;&#x5185;&#x5BB9;&#x6765;&#x81EA;Wikipedia========</p>
+<h4 id="&#x63A5;&#x53E3;interface"><a name="&#x63A5;&#x53E3;interface" class="anchor-navigation-ex-anchor" href="#&#x63A5;&#x53E3;interface"><i class="fa fa-link" aria-hidden="true"></i></a>&#x63A5;&#x53E3;(interface)</h4>
+<p>&#x5728;&#x4E00;&#x4E9B;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7684;&#x8BED;&#x8A00;&#x4E2D;&#xFF08;&#x7279;&#x522B;&#x662F;&#x6CA1;&#x6709;&#x5B8C;&#x6574;&#x591A;&#x91CD;&#x7EE7;&#x627F;&#x7684;&#x8BED;&#x8A00;&#xFF09;&#xFF0C;&#x4F1A;&#x7528;&#x2019;&#x63A5;&#x53E3;&#x2018;&#x6765;&#x5B9A;&#x4E49;&#x6CA1;&#x6709;&#x6570;&#x636E;&#x3001;&#x5C06;&#x884C;&#x4E3A;&#x5B9A;&#x4E49;&#x4E3A;&#x65B9;&#x6CD5;&#x7B7E;&#x540D;(&#x6CA1;&#x6709;&#x5B9E;&#x73B0;&#xFF0C;&#x4E5F;&#x79F0;&#x62BD;&#x8C61;&#x65B9;&#x6CD5;)&#x7684;&#x62BD;&#x8C61;&#x7C7B;&#x578B;&#xFF0C;&#x4EFB;&#x4E00;&#x4E2A;&#x7C7B;&#xFF0C;&#x53EA;&#x8981;&#x6709;&#x2019;&#x63A5;&#x53E3;&#x2018;&#x4E2D;&#x6240;&#x6709;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x5C31;&#x79F0;&#x4E3A;&#x5B9E;&#x73B0;&#x4E86;&#x8BE5;&#x63A5;&#x53E3;&#x3002;&#x63A5;&#x53E3;&#x65E0;&#x6CD5;&#x88AB;&#x5B9E;&#x4F8B;&#x5316;&#x3002;</p>
+<h4 id="&#x534F;&#x8BAE;protocol&#xFF0C;"><a name="&#x534F;&#x8BAE;protocol&#xFF0C;" class="anchor-navigation-ex-anchor" href="#&#x534F;&#x8BAE;protocol&#xFF0C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x534F;&#x8BAE;(Protocol)&#xFF0C;</h4>
+<p>&#x662F;&#x7279;&#x5B9A;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x4F7F;&#x7528;&#x7684;&#x672F;&#x8BED;&#xFF0C;&#x5177;&#x6709;&#x5404;&#x79CD;&#x7279;&#x6B8A;&#x542B;&#x4E49;&#xFF0C;&#x5728;&#x5176;&#x4ED6;&#x8BED;&#x8A00;&#x4E2D;&#x53EF;&#x80FD;&#x79F0;&#x4E3A;&#x63A5;&#x53E3;&#x6216;trait&#x3002;&#x534F;&#x8BAE;&#x6307;&#x793A;&#x7740;&#x5728;&#x8C03;&#x7528;&#x8005;&#x548C;&#x5BF9;&#x8C61;&#x4E4B;&#x95F4;&#x7684;&#x4EA4;&#x4E92;&#x94FE;&#xFF0C;&#x5728;&#x5176;&#x4ED6;&#x65B9;&#x9762;&#x90FD;&#x7C7B;&#x540C;&#x4E8E;&#x901A;&#x4FE1;&#x534F;&#x8BAE;&#x3002;</p>
+<h4 id="trait&#x7279;&#x5F81;"><a name="trait&#x7279;&#x5F81;" class="anchor-navigation-ex-anchor" href="#trait&#x7279;&#x5F81;"><i class="fa fa-link" aria-hidden="true"></i></a>Trait(&#x7279;&#x5F81;)</h4>
+<p>Trait(&#x7279;&#x5F81;)&#x5728;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7A0B;&#x5E8F;&#x8BBE;&#x8BA1;&#x4E2D;&#xFF0C;&#x662F;&#x4E00;&#x4E2A;&#x4E0D;&#x53EF;&#x5B9E;&#x4F8B;&#x5316;&#xFF08;uninstantiable&#xFF09;&#x7684;&#x65B9;&#x6CD5;&#x4E0E;&#x7C7B;&#x578B;&#x7684;&#x96C6;&#x5408;&#xFF0C;&#x4E3A;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x6216;&#x7B97;&#x6CD5;&#x63D0;&#x4F9B;&#x4E86;&#x7B56;&#x7565;&#xFF08;policy&#xFF09;&#x6216;&#x5B9E;&#x73B0;&#x81EA;&#x8EAB;&#x63A5;&#x53E3;&#x7684;&#x7EC6;&#x8282;&#x529F;&#x80FD;&#x3002;trait&#x4E3A;&#x7C7B;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x5957;&#x65B9;&#x6CD5;&#xFF0C;&#x540C;&#x65F6;&#x4E5F;&#x610F;&#x5473;&#x7740;&#x7C7B;&#x5FC5;&#x987B;&#x5B9E;&#x73B0;&#x8FD9;&#x4E48;&#x4E00;&#x5957;&#x65B9;&#x6CD5;&#x3002;</p>
+<p>&#x5728;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7A0B;&#x5E8F;&#x8BBE;&#x8BA1;&#x4E2D;&#xFF0C;protocol&#x3001;interface&#x3001;trait&#x3001;mixin&#x5177;&#x6709;&#x7C7B;&#x4F3C;&#x7684;&#x6DB5;&#x4E49;&#x3002;protocol/interface&#x5B9A;&#x4E49;&#x4E86;&#x51FD;&#x6570;&#x539F;&#x578B;&#xFF1B;trait&#x8FD8;&#x5B9A;&#x4E49;&#x4E86;&#x65B9;&#x6CD5;&#x7684;&#x5B8C;&#x5168;&#x5B9E;&#x73B0;&#xFF1B;mixin&#x9664;&#x4E86;&#x65B9;&#x6CD5;&#x7684;&#x5B8C;&#x6574;&#x5B9E;&#x73B0;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x6210;&#x5458;&#x53D8;&#x91CF;&#x4FDD;&#x5B58;&#x4E86;&#x72B6;&#x6001;&#x4FE1;&#x606F;&#xFF0C;&#x800C;trait&#x901A;&#x5E38;&#x4E0D;&#x4F1A;&#x5982;&#x6B64;&#x3002;</p>
+<p>&#x7406;&#x8BBA;&#x4E0A;&#xFF0C;traits&#x652F;&#x6301;&#x4E00;&#x6279;&#x590D;&#x5408;&#xFF08;composition&#xFF09;&#x64CD;&#x4F5C;&#xFF1A;</p>
+<ul>
+<li>&#x5408;&#x5E76;&#x4E0D;&#x76F8;&#x4EA4;&#x7684;traints&#xFF08;symmetric sum&#xFF09;&#x4EA7;&#x751F;&#x4E00;&#x4E2A;&#x65B0;&#x7684;traits</li>
+<li>&#x8986;&#x76D6;&#xFF08;asymmetric sum&#xFF09;&#xFF1A;&#x5BF9;&#x4E00;&#x4E2A;&#x5DF2;&#x6709;&#x7684;trait&#x589E;&#x52A0;&#x65B9;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x8986;&#x76D6;&#x5DF2;&#x6709;&#x7684;&#x65B9;&#x6CD5;</li>
+<li>&#x522B;&#x540D;&#xFF08;alias&#xFF09;: &#x5BF9;&#x5DF2;&#x6709;&#x65B9;&#x6CD5;&#x589E;&#x52A0;&#x522B;&#x540D;&#xFF0C;&#x4ECE;&#x800C;&#x4EA7;&#x751F;&#x4E00;&#x4E2A;&#x65B0;&#x7684;trait</li>
+<li>&#x6392;&#x9664;&#xFF08;exclusion&#xFF09;&#xFF1A;&#x4ECE;&#x5DF2;&#x6709;trait&#x4E2D;&#x5220;&#x9664;&#x65B9;&#x6CD5;&#x4ECE;&#x800C;&#x4EA7;&#x751F;&#x4E00;&#x4E2A;&#x65B0;&#x7684;trait</li>
+<li>&#x5D4C;&#x5957;&#x7684;trait&#x81EA;&#x52A8;&#x5E73;&#x9762;&#x5316;&#x3002;&#x4F8B;&#x5982; &#x7ED9;&#x5B9A;trait S = A + X, &#x5176;&#x4E2D; X = B + C, &#x90A3;&#x4E48;trait T = A + B + C &#x7B49;&#x4EF7;&#x4E8E; S</li>
+</ul>
+<p>&#x5728;C++&#x3001;Rust&#x3001;PHP&#x7B49;&#x8BED;&#x8A00;&#x4E2D;&#xFF0C;&#x90FD;&#x6709;traits&#x7684;&#x6982;&#x5FF5;&#x3002;</p>
+<p>==================================</p>
+<h4 id="trait&#x4E3E;&#x4F8B;"><a name="trait&#x4E3E;&#x4F8B;" class="anchor-navigation-ex-anchor" href="#trait&#x4E3E;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>Trait&#x4E3E;&#x4F8B;</h4>
+<p>&#x4E0B;&#x9762;&#x91C7;&#x7528;<a href="https://github.com/CocktailJS/traits-decorator" target="_blank">traits-decorator</a>&#x8FD9;&#x4E2A;&#x7B2C;&#x4E09;&#x65B9;&#x6A21;&#x5757;&#x4F5C;&#x4E3A;&#x4F8B;&#x5B50;&#x3002;&#x8FD9;&#x4E2A;&#x6A21;&#x5757;&#x63D0;&#x4F9B;&#x7684;<code>traits</code>&#x88C5;&#x9970;&#x5668;&#xFF0C;&#x4E0D;&#x4EC5;&#x53EF;&#x4EE5;&#x63A5;&#x53D7;&#x5BF9;&#x8C61;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x63A5;&#x53D7; ES6 &#x7C7B;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> { traits } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;traits-decorator&apos;</span>;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TFoo</span> </span>{
+  foo() { <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;foo&apos;</span>) }
+}
+
+<span class="hljs-keyword">const</span> TBar = {
+  bar() { <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;bar&apos;</span>) }
+};
+
+@traits(TFoo, TBar)
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyClass</span> </span>{ }
+
+<span class="hljs-keyword">let</span> obj = <span class="hljs-keyword">new</span> MyClass();
+obj.foo() <span class="hljs-comment">// foo</span>
+obj.bar() <span class="hljs-comment">// bar</span>
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;&#x901A;&#x8FC7;<code>traits</code>&#x88C5;&#x9970;&#x5668;&#xFF0C;&#x5728;<code>MyClass</code>&#x7C7B;&#x4E0A;&#x9762;&#x201C;&#x6DF7;&#x5165;&#x201D;&#x4E86;<code>TFoo</code>&#x7C7B;&#x7684;<code>foo</code>&#x65B9;&#x6CD5;&#x548C;<code>TBar</code>&#x5BF9;&#x8C61;&#x7684;<code>bar</code>&#x65B9;&#x6CD5;&#x3002;</p>
+<p>Trait &#x4E0D;&#x5141;&#x8BB8;&#x201C;&#x6DF7;&#x5165;&#x201D;&#x540C;&#x540D;&#x65B9;&#x6CD5;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> { traits } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;traits-decorator&apos;</span>;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TFoo</span> </span>{
+  foo() { <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;foo&apos;</span>) }
+}
+
+<span class="hljs-keyword">const</span> TBar = {
+  bar() { <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;bar&apos;</span>) },
+  foo() { <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;foo&apos;</span>) }
+};
+
+@traits(TFoo, TBar)
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyClass</span> </span>{ }
+<span class="hljs-comment">// &#x62A5;&#x9519;</span>
+<span class="hljs-comment">// throw new Error(&apos;Method named: &apos; + methodName + &apos; is defined twice.&apos;);</span>
+<span class="hljs-comment">//        ^</span>
+<span class="hljs-comment">// Error: Method named: foo is defined twice.</span>
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;<code>TFoo</code>&#x548C;<code>TBar</code>&#x90FD;&#x6709;<code>foo</code>&#x65B9;&#x6CD5;&#xFF0C;&#x7ED3;&#x679C;<code>traits</code>&#x88C5;&#x9970;&#x5668;&#x62A5;&#x9519;&#x3002;</p>
+<p>&#x4E00;&#x79CD;&#x89E3;&#x51B3;&#x65B9;&#x6CD5;&#x662F;&#x6392;&#x9664;<code>TBar</code>&#x7684;<code>foo</code>&#x65B9;&#x6CD5;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> { traits, excludes } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;traits-decorator&apos;</span>;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TFoo</span> </span>{
+  foo() { <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;foo&apos;</span>) }
+}
+
+<span class="hljs-keyword">const</span> TBar = {
+  bar() { <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;bar&apos;</span>) },
+  foo() { <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;foo&apos;</span>) }
+};
+
+@traits(TFoo, TBar::excludes(<span class="hljs-string">&apos;foo&apos;</span>))
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyClass</span> </span>{ }
+
+<span class="hljs-keyword">let</span> obj = <span class="hljs-keyword">new</span> MyClass();
+obj.foo() <span class="hljs-comment">// foo</span>
+obj.bar() <span class="hljs-comment">// bar</span>
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x4F7F;&#x7528;&#x7ED1;&#x5B9A;&#x8FD0;&#x7B97;&#x7B26;&#xFF08;::&#xFF09;&#x5728;<code>TBar</code>&#x4E0A;&#x6392;&#x9664;<code>foo</code>&#x65B9;&#x6CD5;&#xFF0C;&#x6DF7;&#x5165;&#x65F6;&#x5C31;&#x4E0D;&#x4F1A;&#x62A5;&#x9519;&#x4E86;&#x3002;</p>
+<p>&#x53E6;&#x4E00;&#x79CD;&#x65B9;&#x6CD5;&#x662F;&#x4E3A;<code>TBar</code>&#x7684;<code>foo</code>&#x65B9;&#x6CD5;&#x8D77;&#x4E00;&#x4E2A;&#x522B;&#x540D;&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> { traits, alias } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;traits-decorator&apos;</span>;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TFoo</span> </span>{
+  foo() { <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;foo&apos;</span>) }
+}
+
+<span class="hljs-keyword">const</span> TBar = {
+  bar() { <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;bar&apos;</span>) },
+  foo() { <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;foo&apos;</span>) }
+};
+
+@traits(TFoo, TBar::alias({foo: <span class="hljs-string">&apos;aliasFoo&apos;</span>}))
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyClass</span> </span>{ }
+
+<span class="hljs-keyword">let</span> obj = <span class="hljs-keyword">new</span> MyClass();
+obj.foo() <span class="hljs-comment">// foo</span>
+obj.aliasFoo() <span class="hljs-comment">// foo</span>
+obj.bar() <span class="hljs-comment">// bar</span>
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x4E3A;<code>TBar</code>&#x7684;<code>foo</code>&#x65B9;&#x6CD5;&#x8D77;&#x4E86;&#x522B;&#x540D;<code>aliasFoo</code>&#xFF0C;&#x4E8E;&#x662F;<code>MyClass</code>&#x4E5F;&#x53EF;&#x4EE5;&#x6DF7;&#x5165;<code>TBar</code>&#x7684;<code>foo</code>&#x65B9;&#x6CD5;&#x4E86;&#x3002;</p>
+<p><code>alias</code>&#x548C;<code>excludes</code>&#x65B9;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x7ED3;&#x5408;&#x8D77;&#x6765;&#x4F7F;&#x7528;&#x3002;</p>
+<pre><code class="lang-javascript">@traits(TExample::excludes(<span class="hljs-string">&apos;foo&apos;</span>,<span class="hljs-string">&apos;bar&apos;</span>)::alias({baz:<span class="hljs-string">&apos;exampleBaz&apos;</span>}))
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyClass</span> </span>{}
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x6392;&#x9664;&#x4E86;<code>TExample</code>&#x7684;<code>foo</code>&#x65B9;&#x6CD5;&#x548C;<code>bar</code>&#x65B9;&#x6CD5;&#xFF0C;&#x4E3A;<code>baz</code>&#x65B9;&#x6CD5;&#x8D77;&#x4E86;&#x522B;&#x540D;<code>exampleBaz</code>&#x3002;</p>
+<p><code>as</code>&#x65B9;&#x6CD5;&#x5219;&#x4E3A;&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x63D0;&#x4F9B;&#x4E86;&#x53E6;&#x4E00;&#x79CD;&#x5199;&#x6CD5;&#x3002;</p>
+<pre><code class="lang-javascript">@traits(TExample::<span class="hljs-keyword">as</span>({excludes:[<span class="hljs-string">&apos;foo&apos;</span>, <span class="hljs-string">&apos;bar&apos;</span>], alias: {baz: <span class="hljs-string">&apos;exampleBaz&apos;</span>}}))
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyClass</span> </span>{}
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="5.9_前端模块化方案总结.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 5.9 前端模块化方案总结">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"5.10 装饰器(Decorator)、Mixin、Traits","level":"6.1.10","depth":2,"previous":{"title":"5.9 前端模块化方案总结","level":"6.1.9","depth":2,"path":"Sources/5.9_前端模块化方案总结.md","ref":"./Sources/5.9_前端模块化方案总结.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["-lunr","-search","search-pro","expandable-chapters","splitter","anchor-navigation-ex"],"pluginsConfig":{"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"search-pro":{},"expandable-chapters":{},"splitter":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Sources/5.10_装饰器Decorator、Mixin、Traits.md","mtime":"2021-08-04T06:24:56.382Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-08-04T07:29:20.463Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
