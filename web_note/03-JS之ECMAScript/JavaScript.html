@@ -73,7 +73,7 @@
                         <ul>
                             <li><a href="#object">自定义对象</a></li>
                             <li>
-                                <a href="#built-inObject">内置对象 :</a>
+                                <a href="#built-inObject">内置对象</a>
                                 <ul style="padding-left: 30px;">
                                     <li><a href="#Date">Date</a></li>
                                     <li><a href="#Math">Math</a></li>
@@ -82,11 +82,11 @@
                                     <li><a href="#regexp">RegExp</a></li>
                                 </ul>
                             </li>
-                        </ul>
-
-                        <li><a href="#packData"><strong>0.3.3.</strong>基本包装类型</a></li>
-                        <ul>
-                            <li><a href="#stringpack">String</a></li>
+                            <li>
+                                <a href="#packData">三个基本包装类型</a>
+                                <ul style="padding-left: 30px;">
+                                    <li><a href="#stringpack">String</a></li>
+                                </ul>
                         </ul>
                     </ul>
 
@@ -419,18 +419,17 @@
             <div>
                 <p class="twoemcontent">从语言基础的C语言，继承角度来说。讲js的数据类型</p>
                     <p>	基本类型：</p>
-                    <p class="sixemcontent">数值类型没了，现在都是Number类型，应该算是Number对象了</p>
-                    <p class="sixemcontent">字符类型：String</p>
-                    <p class="sixemcontent">布尔类型：Boolean</p>
-                    <p class="sixemcontent">有内存没初始化：Undefined (是Undefined数据类型)</p>
-                    <p class="sixemcontent">内存为空：null  (null是object数据类型的)</p>
+                    <p class="sixemcontent">数值类型没了，现在都是number类型；</p>
+                    <p class="sixemcontent">布尔类型：boolean；</p>
+                    <p class="sixemcontent">字符类型：string；</p>
+                    <p class="sixemcontent">有内存没初始化：undefined (是undefined数据类型)；</p>
+                    <p class="sixemcontent">内存为空：null  (null是object数据类型的)；</p>
                     <p>	构造类型：</p>
-                    <p class="sixemcontent">数组：Array</p>
-                    <p class="sixemcontent">结构体</p>
-                    <p class="sixemcontent">枚举(作为关键字保留，目前好像没有)</p>
-                    <p class="sixemcontent">字典(字面量与对象字面量差不多一样了，所以字典没了)</p>
-                    <p>	对象类型(C中的指针类型)：</p>
-                    <p class="sixemcontent">系统原生功能类对象：Date、Math</p>
+                    <p class="sixemcontent">除了内置数据类型 — 数组Array外。结构体、枚举(作为关键字保留，目前好像没有)都没有，map也没有</p>
+                    <p>	OOP 对象类型(C中的指针类型)：</p>
+                    <p class="sixemcontent">三个基本包装类型：Number、Boolean、String；</p>
+                    <p class="sixemcontent">系统原生功能类对象：Date、Math、RegExp等；</p>
+                    <p class="sixemcontent">自定义对象；</p>
                 <br>
                 <p class="twoemcontent">从js本身角度分类：</p>
 
@@ -556,8 +555,8 @@
 
                             <p class="twoemcontent">虽然Boolean 类型的字面值只有两个，但 ECMAScript 中所有类型的值都可以转换为Boolean类型</p>
 
-                            <p>非0非NaN的number，非空String、true、undefined、非空对象为true</p>
-                            <p>0 、NaN、“”、false、undefined 、null为false</p>
+                            <p>非0非NaN的number，非空String、true、非空对象为true</p>
+                            <p>0 、NaN、""/''、false、undefined 、null为false</p>
 
                             <strong>Boolean的隐式类型转换</strong>
                             <p class="twoemcontent">在我们需要填入布尔值的时候，如果我们填入一个非布尔值，那么编译器，会自动帮我们转换为布尔值。<span class="redColor">OC也这样</span></p>
@@ -1532,7 +1531,7 @@
 
                             </div>
 
-                <h3 id="packData">基本包装类型</h3>
+                <h3 id="packData">三个基本包装类型</h3>
                     <div>
 
                         <p class="twoemcontent"> 基本数据类型是没有属性和方法的，所以为了方便操作基本数据类型，JavaScript还提供了三个特殊的引用类型(基本包装类型)：String/Number/Boolean</p>
