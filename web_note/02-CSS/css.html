@@ -223,13 +223,13 @@
               <strong>内嵌式写法</strong>
                 <div class="bgcontent" style="width: 300px; margin-left: 4em;">
                     <p class="twoemcontent">&lt;head&gt;</p>
-                    <p>&lt;style type=”text/css”&gt;</p>
+                    <p>&lt;style type="text/css"&gt;</p>
                     <p>样式表写法</p>
                     <p>&lt;/style&gt;</p>
                     <p class="twoemcontent">&lt;/head&gt;</p>
                 </div>
                 <strong>外链式写法</strong>
-                <p>写在head里，<span class="bgcontent">&lt;link rel="stylesheet" href=”1.css”&gt;</span></p>
+                <p>写在head里，<span class="bgcontent">&lt;link rel="stylesheet" href="1.css"&gt;</span></p>
 
                 <strong>行内样式表</strong>
                 <p>比如h标签，<span class="bgcontent">&lt;h1 style="font-size:30px; color:red;"&gt; 标题h1 &lt;/h1&gt;</span></p>
@@ -459,7 +459,7 @@
 
               <h3 id="CSS三大特性">css三大特性</h3>
               <p class="twoemcontent">层叠性</p>
-              <p>当同一个（同一类）标签调用了多个选择器样式时，样式发生了冲突，总是执行后边的代码(后边代码层叠前边的代码)。和标签调用选择器的顺序没有关系。（这个层叠需要参考第三个特性，优先级）</p>
+              <p>当同一个（同一类）标签调用了多个选择器样式时，样式发生了冲突，总是执行后边的代码(后边代码层叠前边的代码)。即取决于CSS样式代码的书写顺序，和标签中书写的选择器顺序没有关系。（这个层叠需要参考第三个特性，优先级）</p>
 
 
               <p class="twoemcontent">继承性</p>
@@ -1375,6 +1375,7 @@
               <p>比display：inline-block 强大的两点：</p>
               <p class="sixemcontent">1. 可以从右向左布局</p>
               <p class="sixemcontent">2. 文字饶图，是行内块做不到的</p>
+              <p class="sixemcontent">3. 一点区别：两者都可以使得行内元素可以设置margin、padding的top、bottom，但float是只影响自身，display: inline-block会带动行内的元素一起移动。</p>
 
               <p class="twoemcontent">浮动的作用</p>
               <p>文本绕图</p>
